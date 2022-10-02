@@ -31,22 +31,22 @@ const ownernya = ownernomer + '@s.whatsapp.net'
 //TIME
 const time2 = moment().tz('Asia/Jakarta').format('HH:mm:ss')  
  if(time2 < "23:59:00"){
-var ucapanWaktu = 'Selamat Malam 🌌'
+var ucapanWaktu = 'Selamat Malam kak 🌌'
  }
  if(time2 < "19:00:00"){
-var ucapanWaktu = 'Selamat Sore 🌃'
+var ucapanWaktu = 'Selamat Sore kak 🌃'
  }
  if(time2 < "18:00:00"){
-var ucapanWaktu = 'Selamat Sore 🌅'
+var ucapanWaktu = 'Selamat Sore kak 🌅'
  }
  if(time2 < "15:00:00"){
-var ucapanWaktu = 'Selamat Siang 🏙'
+var ucapanWaktu = 'Selamat Siang kak 🏙'
  }
  if(time2 < "11:00:00"){
-var ucapanWaktu = 'Selamat Pagi 🌄'
+var ucapanWaktu = 'Selamat Pagi kak 🌄'
  }
  if(time2 < "05:00:00"){
-var ucapanWaktu = 'Selamat Pagi 🌉'
+var ucapanWaktu = 'Selamat Pag kak 🌉'
  } 
 
 // read database
@@ -205,7 +205,7 @@ module.exports = naze = async (naze, m, chatUpdate, store) => {
         if (db.data.chats[m.chat].antilink) {
         if (budy.match(`chat.whatsapp.com`)) {
         m.reply(`「 *ANTI LINK* 」\n\n*Kamu terdeteksi mengirim link group*, *maaf kamu akan di kick‼️,yang mau juga silahkan kirim link‼️*`)
-        if (!isBotAdmins) return m.reply(`*Bot aja bukan admin anj*`)
+        if (!isBotAdmins) return m.reply(`*Bot aja bukan admin*`)
         let gclink = (`https://chat.whatsapp.com/`+await naze.groupInviteCode(m.chat))
         let isLinkThisGc = new RegExp(gclink, 'i')
         let isgclink = isLinkThisGc.test(m.text)
@@ -882,7 +882,7 @@ Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
                if (!text) throw `Example : ${prefix + command} packname|author`
           global.packname = text.split("|")[0]
           global.author = text.split("|")[1]
-          m.reply(`Exif berhasil diubah menjadi\n\n⭔ Packname : ${global.packname}\n⭔ Author : ${global.author}`)
+          m.reply(`Exif berhasil diubah menjadi\n\n𓂅 𑁍ࠬ  ⊹ Packname : ${global.packname}\n𓂅 𑁍ࠬ  ⊹ Author : ${global.author}`)
             }
             break
 	case 'kick': {
@@ -974,7 +974,7 @@ let teks = `══✪〘 *👥 Tag All* 〙✪══
  
  ➲ *Pesan : ${q ? q : 'kosong'}*\n\n`
                 for (let mem of participants) {
-                teks += `⭔ @${mem.id.split('@')[0]}\n`
+                teks += `𓂅 𑁍ࠬ  ⊹ @${mem.id.split('@')[0]}\n`
                 }
                 naze.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
                 }
@@ -994,7 +994,7 @@ let teks = `══✪〘 *👥 Tag All* 〙✪══
                 let anu = await styletext(text)
                 let teks = `Srtle Text From ${text}\n\n`
                 for (let i of anu) {
-                    teks += `⭔ *${i.name}* : ${i.result}\n\n`
+                    teks += `𓂅 𑁍ࠬ  ⊹ *${i.name}* : ${i.result}\n\n`
                 }
                 m.reply(teks)
 	    }
@@ -1298,7 +1298,7 @@ break
                 for (let i of anu) {
                     await sleep(1500)
                     let txt = `「 *Broadcast Group* 」\n\n${text}`
-                    let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '⬅️Back' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 }]
+                    let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '𝐊𝐞𝐦𝐛𝐚𝐥𝐢' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '𝐋𝐢𝐬𝐭 𝐌𝐞𝐧𝐮' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '𝐃𝐨𝐧𝐚𝐬𝐢' }, type: 1 }]
             await naze.sendButtonText(m.chat, buttons, txt, nyoutube, m)
 		}}
             break
@@ -1310,7 +1310,7 @@ break
 		for (let yoi of anu) {
 		    await sleep(3000)
                       let txt = `「 *Broadcast Naze Dev* 」\n\n${text}`
-                      let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '⬅️Back' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 }]
+                      let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '𝐊𝐞𝐦𝐛𝐚𝐥𝐢' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '𝐋𝐢𝐬𝐭 𝐌𝐞𝐧𝐮' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '𝐃𝐨𝐧𝐚𝐬𝐢' }, type: 1 }]
             await naze.sendButtonText(m.chat, buttons, txt, nyoutube, m)
 		}}
             break
@@ -1344,7 +1344,7 @@ break
              case 'listonline': case 'liston': {
                     let id = args && /\d+\-\d+@g.us/.test(args[0]) ? args[0] : m.chat
                     let online = [...Object.keys(store.presences[id]), botNumber]
-                    naze.sendText(m.chat, 'List Online:\n\n' + online.map(v => '⭔ @' + v.replace(/@.+/, '')).join`\n`, m, { mentions: online })
+                    naze.sendText(m.chat, 'List Online:\n\n' + online.map(v => '𓂅 𑁍ࠬ  ⊹ @' + v.replace(/@.+/, '')).join`\n`, m, { mentions: online })
              }
              break
             case 'ebinary': {
@@ -1913,7 +1913,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 let teks = 'YouTube Search\n\n Result From '+text+'\n\n'
                 let no = 1
                 for (let i of search.all) {
-                    teks += `⭔ No : ${no++}\n⭔ Type : ${i.type}\n⭔ Video ID : ${i.videoId}\n⭔ Title : ${i.title}\n⭔ Views : ${i.views}\n⭔ Duration : ${i.timestamp}\n⭔ Upload At : ${i.ago}\n⭔ Author : ${i.author.name}\n⭔ Url : ${i.url}\n\n─────────────────\n\n`
+                    teks += `𓂅 𑁍ࠬ  ⊹ No : ${no++}\n𓂅 𑁍ࠬ  ⊹ Type : ${i.type}\n𓂅 𑁍ࠬ  ⊹ Video ID : ${i.videoId}\n𓂅 𑁍ࠬ  ⊹ Title : ${i.title}\n𓂅 𑁍ࠬ  ⊹ Views : ${i.views}\n𓂅 𑁍ࠬ  ⊹ Duration : ${i.timestamp}\n𓂅 𑁍ࠬ  ⊹ Upload At : ${i.ago}\n𓂅 𑁍ࠬ  ⊹ Author : ${i.author.name}\n𓂅 𑁍ࠬ  ⊹ Url : ${i.url}\n\n─────────────────\n\n`
                 }
                 naze.sendMessage(m.chat, { image: { url: search.all[0].thumbnail },  caption: teks }, { quoted: m })
             }
@@ -1924,9 +1924,9 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 google({'query': text}).then(res => {
                 let teks = `Google Search From : ${text}\n\n`
                 for (let g of res) {
-                teks += `⭔ *Title* : ${g.title}\n`
-                teks += `⭔ *Description* : ${g.snippet}\n`
-                teks += `⭔ *Link* : ${g.link}\n\n────────────────────────\n\n`
+                teks += `𓂅 𑁍ࠬ  ⊹ *Title* : ${g.title}\n`
+                teks += `𓂅 𑁍ࠬ  ⊹ *Description* : ${g.snippet}\n`
+                teks += `𓂅 𑁍ࠬ  ⊹ *Link* : ${g.link}\n\n────────────────────────\n\n`
                 } 
                 m.reply(teks)
                 })
@@ -1964,16 +1964,16 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 let buttonMessage = {
                     image: { url: anu.thumbnail },
                     caption: `
-⭔ Title : ${anu.title}
-⭔ Ext : Search
-⭔ ID : ${anu.videoId}
-⭔ Duration : ${anu.timestamp}
-⭔ Viewers : ${anu.views}
-⭔ Upload At : ${anu.ago}
-⭔ Author : ${anu.author.name}
-⭔ Channel : ${anu.author.url}
-⭔ Description : ${anu.description}
-⭔ Url : ${anu.url}`,
+𓂅 𑁍ࠬ  ⊹ Title : ${anu.title}
+𓂅 𑁍ࠬ  ⊹ Ext : Search
+𓂅 𑁍ࠬ  ⊹ ID : ${anu.videoId}
+𓂅 𑁍ࠬ  ⊹ Duration : ${anu.timestamp}
+𓂅 𑁍ࠬ  ⊹ Viewers : ${anu.views}
+𓂅 𑁍ࠬ  ⊹ Upload At : ${anu.ago}
+𓂅 𑁍ࠬ  ⊹ Author : ${anu.author.name}
+𓂅 𑁍ࠬ  ⊹ Channel : ${anu.author.url}
+𓂅 𑁍ࠬ  ⊹ Description : ${anu.description}
+𓂅 𑁍ࠬ  ⊹ Url : ${anu.url}`,
                     footer: naze.user.name,
                     buttons: buttons,
                     headerType: 4
@@ -1987,7 +1987,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 let quality = args[1] ? args[1] : '128kbps'
                 let media = await yta(text, quality)
                 if (media.filesize >= 100000) return m.reply('File Melebihi Batas '+util.format(media))
-                naze.sendImage(m.chat, media.thumb, `⭔ Title : ${media.title}\n⭔ File Size : ${media.filesizeF}\n⭔ Url : ${isUrl(text)}\n⭔ Ext : MP3\n⭔ Resolusi : ${args[1] || '128kbps'}`, m)
+                naze.sendImage(m.chat, media.thumb, `𓂅 𑁍ࠬ  ⊹ Title : ${media.title}\n𓂅 𑁍ࠬ  ⊹ File Size : ${media.filesizeF}\n𓂅 𑁍ࠬ  ⊹ Url : ${isUrl(text)}\n𓂅 𑁍ࠬ  ⊹ Ext : MP3\n𓂅 𑁍ࠬ  ⊹ Resolusi : ${args[1] || '128kbps'}`, m)
                 naze.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
             }
             break
@@ -1997,7 +1997,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 let quality = args[1] ? args[1] : '360p'
                 let media = await ytv(text, quality)
                 if (media.filesize >= 100000) return m.reply('File Melebihi Batas '+util.format(media))
-                naze.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `⭔ Title : ${media.title}\n⭔ File Size : ${media.filesizeF}\n⭔ Url : ${isUrl(text)}\n⭔ Ext : MP3\n⭔ Resolusi : ${args[1] || '360p'}` }, { quoted: m })
+                naze.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `𓂅 𑁍ࠬ  ⊹ Title : ${media.title}\n𓂅 𑁍ࠬ  ⊹ File Size : ${media.filesizeF}\n𓂅 𑁍ࠬ  ⊹ Url : ${isUrl(text)}\n𓂅 𑁍ࠬ  ⊹ Ext : MP3\n𓂅 𑁍ࠬ  ⊹ Resolusi : ${args[1] || '360p'}` }, { quoted: m })
             }
             break
 	    case 'getmusic': {
@@ -2010,7 +2010,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 let quality = args[1] ? args[1] : '128kbps'
                 let media = await yta(urls[text - 1], quality)
                 if (media.filesize >= 100000) return m.reply('File Melebihi Batas '+util.format(media))
-                naze.sendImage(m.chat, media.thumb, `⭔ Title : ${media.title}\n⭔ File Size : ${media.filesizeF}\n⭔ Url : ${urls[text - 1]}\n⭔ Ext : MP3\n⭔ Resolusi : ${args[1] || '128kbps'}`, m)
+                naze.sendImage(m.chat, media.thumb, `𓂅 𑁍ࠬ  ⊹ Title : ${media.title}\n𓂅 𑁍ࠬ  ⊹ File Size : ${media.filesizeF}\n𓂅 𑁍ࠬ  ⊹ Url : ${urls[text - 1]}\n𓂅 𑁍ࠬ  ⊹ Ext : MP3\n𓂅 𑁍ࠬ  ⊹ Resolusi : ${args[1] || '128kbps'}`, m)
                 naze.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
             }
             break
@@ -2024,7 +2024,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 let quality = args[1] ? args[1] : '360p'
                 let media = await ytv(urls[text - 1], quality)
                 if (media.filesize >= 100000) return m.reply('File Melebihi Batas '+util.format(media))
-                naze.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `⭔ Title : ${media.title}\n⭔ File Size : ${media.filesizeF}\n⭔ Url : ${urls[text - 1]}\n⭔ Ext : MP3\n⭔ Resolusi : ${args[1] || '360p'}` }, { quoted: m })
+                naze.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `𓂅 𑁍ࠬ  ⊹ Title : ${media.title}\n𓂅 𑁍ࠬ  ⊹ File Size : ${media.filesizeF}\n𓂅 𑁍ࠬ  ⊹ Url : ${urls[text - 1]}\n𓂅 𑁍ࠬ  ⊹ Ext : MP3\n𓂅 𑁍ࠬ  ⊹ Resolusi : ${args[1] || '360p'}` }, { quoted: m })
             }
             break
             case 'pinterest': {
@@ -2032,14 +2032,14 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 		let { pinterest } = require('./lib/scraper')
                 anu = await pinterest(text)
                 result = anu[Math.floor(Math.random() * anu.length)]
-                naze.sendMessage(m.chat, { image: { url: result }, caption: '⭔ Media Url : '+result }, { quoted: m })
+                naze.sendMessage(m.chat, { image: { url: result }, caption: '𓂅 𑁍ࠬ  ⊹ Media Url : '+result }, { quoted: m })
             }
             break
             case 'waifu': {
             	m.reply(mess.wait)
                 anu = await fetchJson(`https://waifu.pics/api/sfw/waifu`)
                 buffer = await getBuffer(anu.url)
-                let buttons = [{buttonId: `waifu`, buttonText: {displayText: 'Next Image'}, type: 1},{buttonId: `simplemenu`, buttonText: {displayText: '⬅️Back'}, type: 1}]
+                let buttons = [{buttonId: `waifu`, buttonText: {displayText: 'Next Image'}, type: 1},{buttonId: `simplemenu`, buttonText: {displayText: '𝐊𝐞𝐦𝐛𝐚𝐥𝐢'}, type: 1}]
                 let buttonMessage = {
                     image: buffer,
                     caption: `Random Waifu`,
@@ -2082,7 +2082,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 ]
                 let buttonMessage = {
                     image: { url: result.image[0] },
-                    caption: `⭔ Title : ${result.title}\n⭔ Category : ${result.type}\n⭔ Detail : ${result.source}\n⭔ Media Url : ${result.image[2] || result.image[1] || result.image[0]}`,
+                    caption: `𓂅 𑁍ࠬ  ⊹ Title : ${result.title}\n𓂅 𑁍ࠬ  ⊹ Category : ${result.type}\n𓂅 𑁍ࠬ  ⊹ Detail : ${result.source}\n𓂅 𑁍ࠬ  ⊹ Media Url : ${result.image[2] || result.image[1] || result.image[0]}`,
                     footer: nyoutube,
                     buttons: buttons,
                     headerType: 4
@@ -2096,7 +2096,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 n = anu.result
                 result = n[Math.floor(Math.random() * n.length)]
                 let jwbn = `*Nama : ${result.nama}\n*Link : ${result.link}*`
-		let buttons = [{ buttonId: `gcsearch ${text}`, buttonText: { displayText: 'Next' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 }]
+		let buttons = [{ buttonId: `gcsearch ${text}`, buttonText: { displayText: 'Next' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '𝐃𝐨𝐧𝐚𝐬𝐢' }, type: 1 }]
             await naze.sendButtonText(m.chat, buttons, jwbn, nyoutube, m, {quoted: fgclink})
             }
             break
@@ -2110,7 +2110,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 ]
                 let buttonMessage = {
                     image: { url: result.image },
-                    caption: `⭔ Title : ${result.title}\n⭔ Source : ${result.source}\n⭔ Media Url : ${result.image}`,
+                    caption: `𓂅 𑁍ࠬ  ⊹ Title : ${result.title}\n𓂅 𑁍ࠬ  ⊹ Source : ${result.source}\n𓂅 𑁍ࠬ  ⊹ Media Url : ${result.image}`,
                     footer: nyoutube,
                     buttons: buttons,
                     headerType: 4
@@ -2175,14 +2175,14 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 if (!Number(text)) throw `Example : ${prefix + command} 6285822347348`
                 let anu = await primbon.nomer_hoki(Number(text))
                 if (anu.status == false) return m.reply(anu.message)
-                naze.sendText(m.chat, `⭔ *Nomor HP :* ${anu.message.nomer_hp}\n⭔ *Angka Shuzi :* ${anu.message.angka_shuzi}\n⭔ *Energi Positif :*\n- Kekayaan : ${anu.message.energi_positif.kekayaan}\n- Kesehatan : ${anu.message.energi_positif.kesehatan}\n- Cinta : ${anu.message.energi_positif.cinta}\n- Kestabilan : ${anu.message.energi_positif.kestabilan}\n- Persentase : ${anu.message.energi_positif.persentase}\n⭔ *Energi Negatif :*\n- Perselisihan : ${anu.message.energi_negatif.perselisihan}\n- Kehilangan : ${anu.message.energi_negatif.kehilangan}\n- Malapetaka : ${anu.message.energi_negatif.malapetaka}\n- Kehancuran : ${anu.message.energi_negatif.kehancuran}\n- Persentase : ${anu.message.energi_negatif.persentase}`, m)
+                naze.sendText(m.chat, `𓂅 𑁍ࠬ  ⊹ *Nomor HP :* ${anu.message.nomer_hp}\n𓂅 𑁍ࠬ  ⊹ *Angka Shuzi :* ${anu.message.angka_shuzi}\n𓂅 𑁍ࠬ  ⊹ *Energi Positif :*\n- Kekayaan : ${anu.message.energi_positif.kekayaan}\n- Kesehatan : ${anu.message.energi_positif.kesehatan}\n- Cinta : ${anu.message.energi_positif.cinta}\n- Kestabilan : ${anu.message.energi_positif.kestabilan}\n- Persentase : ${anu.message.energi_positif.persentase}\n𓂅 𑁍ࠬ  ⊹ *Energi Negatif :*\n- Perselisihan : ${anu.message.energi_negatif.perselisihan}\n- Kehilangan : ${anu.message.energi_negatif.kehilangan}\n- Malapetaka : ${anu.message.energi_negatif.malapetaka}\n- Kehancuran : ${anu.message.energi_negatif.kehancuran}\n- Persentase : ${anu.message.energi_negatif.persentase}`, m)
             }
             break
             case 'artimimpi': case 'tafsirmimpi': {
                 if (!text) throw `Example : ${prefix + command} belanja`
                 let anu = await primbon.tafsir_mimpi(text)
                 if (anu.status == false) return m.reply(anu.message)
-                naze.sendText(m.chat, `⭔ *Mimpi :* ${anu.message.mimpi}\n⭔ *Arti :* ${anu.message.arti}\n⭔ *Solusi :* ${anu.message.solusi}`, m)
+                naze.sendText(m.chat, `𓂅 𑁍ࠬ  ⊹ *Mimpi :* ${anu.message.mimpi}\n𓂅 𑁍ࠬ  ⊹ *Arti :* ${anu.message.arti}\n𓂅 𑁍ࠬ  ⊹ *Solusi :* ${anu.message.solusi}`, m)
             }
             break
             case 'ramalanjodoh': case 'ramaljodoh': {
@@ -2190,7 +2190,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 let [nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2] = text.split`,`
                 let anu = await primbon.ramalan_jodoh(nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2)
                 if (anu.status == false) return m.reply(anu.message)
-                naze.sendText(m.chat, `⭔ *Nama Anda :* ${anu.message.nama_anda.nama}\n⭔ *Lahir Anda :* ${anu.message.nama_anda.tgl_lahir}\n⭔ *Nama Pasangan :* ${anu.message.nama_pasangan.nama}\n⭔ *Lahir Pasangan :* ${anu.message.nama_pasangan.tgl_lahir}\n⭔ *Hasil :* ${anu.message.result}\n⭔ *Catatan :* ${anu.message.catatan}`, m)
+                naze.sendText(m.chat, `𓂅 𑁍ࠬ  ⊹ *Nama Anda :* ${anu.message.nama_anda.nama}\n𓂅 𑁍ࠬ  ⊹ *Lahir Anda :* ${anu.message.nama_anda.tgl_lahir}\n𓂅 𑁍ࠬ  ⊹ *Nama Pasangan :* ${anu.message.nama_pasangan.nama}\n𓂅 𑁍ࠬ  ⊹ *Lahir Pasangan :* ${anu.message.nama_pasangan.tgl_lahir}\n𓂅 𑁍ࠬ  ⊹ *Hasil :* ${anu.message.result}\n𓂅 𑁍ࠬ  ⊹ *Catatan :* ${anu.message.catatan}`, m)
             }
             break
             case 'ramalanjodohbali': case 'ramaljodohbali': {
@@ -2198,7 +2198,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 let [nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2] = text.split`,`
                 let anu = await primbon.ramalan_jodoh_bali(nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2)
                 if (anu.status == false) return m.reply(anu.message)
-                naze.sendText(m.chat, `⭔ *Nama Anda :* ${anu.message.nama_anda.nama}\n⭔ *Lahir Anda :* ${anu.message.nama_anda.tgl_lahir}\n⭔ *Nama Pasangan :* ${anu.message.nama_pasangan.nama}\n⭔ *Lahir Pasangan :* ${anu.message.nama_pasangan.tgl_lahir}\n⭔ *Hasil :* ${anu.message.result}\n⭔ *Catatan :* ${anu.message.catatan}`, m)
+                naze.sendText(m.chat, `𓂅 𑁍ࠬ  ⊹ *Nama Anda :* ${anu.message.nama_anda.nama}\n𓂅 𑁍ࠬ  ⊹ *Lahir Anda :* ${anu.message.nama_anda.tgl_lahir}\n𓂅 𑁍ࠬ  ⊹ *Nama Pasangan :* ${anu.message.nama_pasangan.nama}\n𓂅 𑁍ࠬ  ⊹ *Lahir Pasangan :* ${anu.message.nama_pasangan.tgl_lahir}\n𓂅 𑁍ࠬ  ⊹ *Hasil :* ${anu.message.result}\n𓂅 𑁍ࠬ  ⊹ *Catatan :* ${anu.message.catatan}`, m)
             }
             break
             case 'suamiistri': {
@@ -2206,7 +2206,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 let [nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2] = text.split`,`
                 let anu = await primbon.suami_istri(nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2)
                 if (anu.status == false) return m.reply(anu.message)
-                naze.sendText(m.chat, `⭔ *Nama Suami :* ${anu.message.suami.nama}\n⭔ *Lahir Suami :* ${anu.message.suami.tgl_lahir}\n⭔ *Nama Istri :* ${anu.message.istri.nama}\n⭔ *Lahir Istri :* ${anu.message.istri.tgl_lahir}\n⭔ *Hasil :* ${anu.message.result}\n⭔ *Catatan :* ${anu.message.catatan}`, m)
+                naze.sendText(m.chat, `𓂅 𑁍ࠬ  ⊹ *Nama Suami :* ${anu.message.suami.nama}\n𓂅 𑁍ࠬ  ⊹ *Lahir Suami :* ${anu.message.suami.tgl_lahir}\n𓂅 𑁍ࠬ  ⊹ *Nama Istri :* ${anu.message.istri.nama}\n𓂅 𑁍ࠬ  ⊹ *Lahir Istri :* ${anu.message.istri.tgl_lahir}\n𓂅 𑁍ࠬ  ⊹ *Hasil :* ${anu.message.result}\n𓂅 𑁍ࠬ  ⊹ *Catatan :* ${anu.message.catatan}`, m)
             }
             break
             case 'ramalancinta': case 'ramalcinta': {
@@ -2214,14 +2214,14 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 let [nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2] = text.split`,`
                 let anu = await primbon.ramalan_cinta(nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2)
                 if (anu.status == false) return m.reply(anu.message)
-                naze.sendText(m.chat, `⭔ *Nama Anda :* ${anu.message.nama_anda.nama}\n⭔ *Lahir Anda :* ${anu.message.nama_anda.tgl_lahir}\n⭔ *Nama Pasangan :* ${anu.message.nama_pasangan.nama}\n⭔ *Lahir Pasangan :* ${anu.message.nama_pasangan.tgl_lahir}\n⭔ *Sisi Positif :* ${anu.message.sisi_positif}\n⭔ *Sisi Negatif :* ${anu.message.sisi_negatif}\n⭔ *Catatan :* ${anu.message.catatan}`, m)
+                naze.sendText(m.chat, `𓂅 𑁍ࠬ  ⊹ *Nama Anda :* ${anu.message.nama_anda.nama}\n𓂅 𑁍ࠬ  ⊹ *Lahir Anda :* ${anu.message.nama_anda.tgl_lahir}\n𓂅 𑁍ࠬ  ⊹ *Nama Pasangan :* ${anu.message.nama_pasangan.nama}\n𓂅 𑁍ࠬ  ⊹ *Lahir Pasangan :* ${anu.message.nama_pasangan.tgl_lahir}\n𓂅 𑁍ࠬ  ⊹ *Sisi Positif :* ${anu.message.sisi_positif}\n𓂅 𑁍ࠬ  ⊹ *Sisi Negatif :* ${anu.message.sisi_negatif}\n𓂅 𑁍ࠬ  ⊹ *Catatan :* ${anu.message.catatan}`, m)
             }
             break
             case 'artinama': {
                 if (!text) throw `Example : ${prefix + command} Dika Ardianta`
                 let anu = await primbon.arti_nama(text)
                 if (anu.status == false) return m.reply(anu.message)
-                naze.sendText(m.chat, `⭔ *Nama :* ${anu.message.nama}\n⭔ *Arti :* ${anu.message.arti}\n⭔ *Catatan :* ${anu.message.catatan}`, m)
+                naze.sendText(m.chat, `𓂅 𑁍ࠬ  ⊹ *Nama :* ${anu.message.nama}\n𓂅 𑁍ࠬ  ⊹ *Arti :* ${anu.message.arti}\n𓂅 𑁍ࠬ  ⊹ *Catatan :* ${anu.message.catatan}`, m)
             }
             break
             case 'kecocokannama': case 'cocoknama': {
@@ -2229,7 +2229,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 let [nama, tgl, bln, thn] = text.split`,`
                 let anu = await primbon.kecocokan_nama(nama, tgl, bln, thn)
                 if (anu.status == false) return m.reply(anu.message)
-                naze.sendText(m.chat, `⭔ *Nama :* ${anu.message.nama}\n⭔ *Lahir :* ${anu.message.tgl_lahir}\n⭔ *Life Path :* ${anu.message.life_path}\n⭔ *Destiny :* ${anu.message.destiny}\n⭔ *Destiny Desire :* ${anu.message.destiny_desire}\n⭔ *Personality :* ${anu.message.personality}\n⭔ *Persentase :* ${anu.message.persentase_kecocokan}`, m)
+                naze.sendText(m.chat, `𓂅 𑁍ࠬ  ⊹ *Nama :* ${anu.message.nama}\n𓂅 𑁍ࠬ  ⊹ *Lahir :* ${anu.message.tgl_lahir}\n𓂅 𑁍ࠬ  ⊹ *Life Path :* ${anu.message.life_path}\n𓂅 𑁍ࠬ  ⊹ *Destiny :* ${anu.message.destiny}\n𓂅 𑁍ࠬ  ⊹ *Destiny Desire :* ${anu.message.destiny_desire}\n𓂅 𑁍ࠬ  ⊹ *Personality :* ${anu.message.personality}\n𓂅 𑁍ࠬ  ⊹ *Persentase :* ${anu.message.persentase_kecocokan}`, m)
             }
             break
             case 'kecocokanpasangan': case 'cocokpasangan': case 'pasangan': {
@@ -2237,7 +2237,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 let [nama1, nama2] = text.split`|`
                 let anu = await primbon.kecocokan_nama_pasangan(nama1, nama2)
                 if (anu.status == false) return m.reply(anu.message)
-                naze.sendImage(m.chat,  anu.message.gambar, `⭔ *Nama Anda :* ${anu.message.nama_anda}\n⭔ *Nama Pasangan :* ${anu.message.nama_pasangan}\n⭔ *Sisi Positif :* ${anu.message.sisi_positif}\n⭔ *Sisi Negatif :* ${anu.message.sisi_negatif}`, m)
+                naze.sendImage(m.chat,  anu.message.gambar, `𓂅 𑁍ࠬ  ⊹ *Nama Anda :* ${anu.message.nama_anda}\n𓂅 𑁍ࠬ  ⊹ *Nama Pasangan :* ${anu.message.nama_pasangan}\n𓂅 𑁍ࠬ  ⊹ *Sisi Positif :* ${anu.message.sisi_positif}\n𓂅 𑁍ࠬ  ⊹ *Sisi Negatif :* ${anu.message.sisi_negatif}`, m)
             }
             break
             case 'jadianpernikahan': case 'jadiannikah': {
@@ -2245,7 +2245,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.tanggal_jadian_pernikahan(tgl, bln, thn)
                 if (anu.status == false) return m.reply(anu.message)
-                naze.sendText(m.chat, `⭔ *Tanggal Pernikahan :* ${anu.message.tanggal}\n⭔ *karakteristik :* ${anu.message.karakteristik}`, m)
+                naze.sendText(m.chat, `𓂅 𑁍ࠬ  ⊹ *Tanggal Pernikahan :* ${anu.message.tanggal}\n𓂅 𑁍ࠬ  ⊹ *karakteristik :* ${anu.message.karakteristik}`, m)
             }
             break
             case 'sifatusaha': {
@@ -2253,7 +2253,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.sifat_usaha_bisnis(tgl, bln, thn)
                 if (anu.status == false) return m.reply(anu.message)
-                naze.sendText(m.chat, `⭔ *Lahir :* ${anu.message.hari_lahir}\n⭔ *Usaha :* ${anu.message.usaha}`, m)
+                naze.sendText(m.chat, `𓂅 𑁍ࠬ  ⊹ *Lahir :* ${anu.message.hari_lahir}\n𓂅 𑁍ࠬ  ⊹ *Usaha :* ${anu.message.usaha}`, m)
             }
             break
             case 'rejeki': case 'rezeki': {
@@ -2261,7 +2261,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.rejeki_hoki_weton(tgl, bln, thn)
                 if (anu.status == false) return m.reply(anu.message)
-                naze.sendText(m.chat, `⭔ *Lahir :* ${anu.message.hari_lahir}\n⭔ *Rezeki :* ${anu.message.rejeki}\n⭔ *Catatan :* ${anu.message.catatan}`, m)
+                naze.sendText(m.chat, `𓂅 𑁍ࠬ  ⊹ *Lahir :* ${anu.message.hari_lahir}\n𓂅 𑁍ࠬ  ⊹ *Rezeki :* ${anu.message.rejeki}\n𓂅 𑁍ࠬ  ⊹ *Catatan :* ${anu.message.catatan}`, m)
             }
             break
             case 'pekerjaan': case 'kerja': {
@@ -2269,7 +2269,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.pekerjaan_weton_lahir(tgl, bln, thn)
                 if (anu.status == false) return m.reply(anu.message)
-                naze.sendText(m.chat, `⭔ *Lahir :* ${anu.message.hari_lahir}\n⭔ *Pekerjaan :* ${anu.message.pekerjaan}\n⭔ *Catatan :* ${anu.message.catatan}`, m)
+                naze.sendText(m.chat, `𓂅 𑁍ࠬ  ⊹ *Lahir :* ${anu.message.hari_lahir}\n𓂅 𑁍ࠬ  ⊹ *Pekerjaan :* ${anu.message.pekerjaan}\n𓂅 𑁍ࠬ  ⊹ *Catatan :* ${anu.message.catatan}`, m)
             }
             break
             case 'ramalannasib': case 'ramalnasib': case 'nasib': {
@@ -2277,7 +2277,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.ramalan_nasib(tgl, bln, thn)
                 if (anu.status == false) return m.reply(anu.message)
-                naze.sendText(m.chat, `⭔ *Analisa :* ${anu.message.analisa}\n⭔ *Angka Akar :* ${anu.message.angka_akar}\n⭔ *Sifat :* ${anu.message.sifat}\n⭔ *Elemen :* ${anu.message.elemen}\n⭔ *Angka Keberuntungan :* ${anu.message.angka_keberuntungan}`, m)
+                naze.sendText(m.chat, `𓂅 𑁍ࠬ  ⊹ *Analisa :* ${anu.message.analisa}\n𓂅 𑁍ࠬ  ⊹ *Angka Akar :* ${anu.message.angka_akar}\n𓂅 𑁍ࠬ  ⊹ *Sifat :* ${anu.message.sifat}\n𓂅 𑁍ࠬ  ⊹ *Elemen :* ${anu.message.elemen}\n𓂅 𑁍ࠬ  ⊹ *Angka Keberuntungan :* ${anu.message.angka_keberuntungan}`, m)
             }
             break
             case 'potensipenyakit': case 'penyakit': {
@@ -2285,7 +2285,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.cek_potensi_penyakit(tgl, bln, thn)
                 if (anu.status == false) return m.reply(anu.message)
-                naze.sendText(m.chat, `⭔ *Analisa :* ${anu.message.analisa}\n⭔ *Sektor :* ${anu.message.sektor}\n⭔ *Elemen :* ${anu.message.elemen}\n⭔ *Catatan :* ${anu.message.catatan}`, m)
+                naze.sendText(m.chat, `𓂅 𑁍ࠬ  ⊹ *Analisa :* ${anu.message.analisa}\n𓂅 𑁍ࠬ  ⊹ *Sektor :* ${anu.message.sektor}\n𓂅 𑁍ࠬ  ⊹ *Elemen :* ${anu.message.elemen}\n𓂅 𑁍ࠬ  ⊹ *Catatan :* ${anu.message.catatan}`, m)
             }
             break
             case 'artitarot': case 'tarot': {
@@ -2293,7 +2293,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.arti_kartu_tarot(tgl, bln, thn)
                 if (anu.status == false) return m.reply(anu.message)
-                naze.sendImage(m.chat, anu.message.image, `⭔ *Lahir :* ${anu.message.tgl_lahir}\n⭔ *Simbol Tarot :* ${anu.message.simbol_tarot}\n⭔ *Arti :* ${anu.message.arti}\n⭔ *Catatan :* ${anu.message.catatan}`, m)
+                naze.sendImage(m.chat, anu.message.image, `𓂅 𑁍ࠬ  ⊹ *Lahir :* ${anu.message.tgl_lahir}\n𓂅 𑁍ࠬ  ⊹ *Simbol Tarot :* ${anu.message.simbol_tarot}\n𓂅 𑁍ࠬ  ⊹ *Arti :* ${anu.message.arti}\n𓂅 𑁍ࠬ  ⊹ *Catatan :* ${anu.message.catatan}`, m)
             }
             break
             case 'fengshui': {
@@ -2301,7 +2301,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 let [nama, gender, tahun] = text.split`,`
                 let anu = await primbon.perhitungan_feng_shui(nama, gender, tahun)
                 if (anu.status == false) return m.reply(anu.message)
-                naze.sendText(m.chat, `⭔ *Nama :* ${anu.message.nama}\n⭔ *Lahir :* ${anu.message.tahun_lahir}\n⭔ *Gender :* ${anu.message.jenis_kelamin}\n⭔ *Angka Kua :* ${anu.message.angka_kua}\n⭔ *Kelompok :* ${anu.message.kelompok}\n⭔ *Karakter :* ${anu.message.karakter}\n⭔ *Sektor Baik :* ${anu.message.sektor_baik}\n⭔ *Sektor Buruk :* ${anu.message.sektor_buruk}`, m)
+                naze.sendText(m.chat, `𓂅 𑁍ࠬ  ⊹ *Nama :* ${anu.message.nama}\n𓂅 𑁍ࠬ  ⊹ *Lahir :* ${anu.message.tahun_lahir}\n𓂅 𑁍ࠬ  ⊹ *Gender :* ${anu.message.jenis_kelamin}\n𓂅 𑁍ࠬ  ⊹ *Angka Kua :* ${anu.message.angka_kua}\n𓂅 𑁍ࠬ  ⊹ *Kelompok :* ${anu.message.kelompok}\n𓂅 𑁍ࠬ  ⊹ *Karakter :* ${anu.message.karakter}\n𓂅 𑁍ࠬ  ⊹ *Sektor Baik :* ${anu.message.sektor_baik}\n𓂅 𑁍ࠬ  ⊹ *Sektor Buruk :* ${anu.message.sektor_buruk}`, m)
             }
             break
             case 'haribaik': {
@@ -2309,7 +2309,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.petung_hari_baik(tgl, bln, thn)
                 if (anu.status == false) return m.reply(anu.message)
-                naze.sendText(m.chat, `⭔ *Lahir :* ${anu.message.tgl_lahir}\n⭔ *Kala Tinantang :* ${anu.message.kala_tinantang}\n⭔ *Info :* ${anu.message.info}\n⭔ *Catatan :* ${anu.message.catatan}`, m)
+                naze.sendText(m.chat, `𓂅 𑁍ࠬ  ⊹ *Lahir :* ${anu.message.tgl_lahir}\n𓂅 𑁍ࠬ  ⊹ *Kala Tinantang :* ${anu.message.kala_tinantang}\n𓂅 𑁍ࠬ  ⊹ *Info :* ${anu.message.info}\n𓂅 𑁍ࠬ  ⊹ *Catatan :* ${anu.message.catatan}`, m)
             }
             break
             case 'harisangar': case 'taliwangke': {
@@ -2317,7 +2317,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.hari_sangar_taliwangke(tgl, bln, thn)
                 if (anu.status == false) return m.reply(anu.message)
-                naze.sendText(m.chat, `⭔ *Lahir :* ${anu.message.tgl_lahir}\n⭔ *Hasil :* ${anu.message.result}\n⭔ *Info :* ${anu.message.info}\n⭔ *Catatan :* ${anu.message.catatan}`, m)
+                naze.sendText(m.chat, `𓂅 𑁍ࠬ  ⊹ *Lahir :* ${anu.message.tgl_lahir}\n𓂅 𑁍ࠬ  ⊹ *Hasil :* ${anu.message.result}\n𓂅 𑁍ࠬ  ⊹ *Info :* ${anu.message.info}\n𓂅 𑁍ࠬ  ⊹ *Catatan :* ${anu.message.catatan}`, m)
             }
             break
             case 'harinaas': case 'harisial': {
@@ -2325,7 +2325,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.primbon_hari_naas(tgl, bln, thn)
                 if (anu.status == false) return m.reply(anu.message)
-                naze.sendText(m.chat, `⭔ *Hari Lahir :* ${anu.message.hari_lahir}\n⭔ *Tanggal Lahir :* ${anu.message.tgl_lahir}\n⭔ *Hari Naas :* ${anu.message.hari_naas}\n⭔ *Info :* ${anu.message.catatan}\n⭔ *Catatan :* ${anu.message.info}`, m)
+                naze.sendText(m.chat, `𓂅 𑁍ࠬ  ⊹ *Hari Lahir :* ${anu.message.hari_lahir}\n𓂅 𑁍ࠬ  ⊹ *Tanggal Lahir :* ${anu.message.tgl_lahir}\n𓂅 𑁍ࠬ  ⊹ *Hari Naas :* ${anu.message.hari_naas}\n𓂅 𑁍ࠬ  ⊹ *Info :* ${anu.message.catatan}\n𓂅 𑁍ࠬ  ⊹ *Catatan :* ${anu.message.info}`, m)
             }
             break
             case 'nagahari': case 'harinaga': {
@@ -2333,7 +2333,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.rahasia_naga_hari(tgl, bln, thn)
                 if (anu.status == false) return m.reply(anu.message)
-                naze.sendText(m.chat, `⭔ *Hari Lahir :* ${anu.message.hari_lahir}\n⭔ *Tanggal Lahir :* ${anu.message.tgl_lahir}\n⭔ *Arah Naga Hari :* ${anu.message.arah_naga_hari}\n⭔ *Catatan :* ${anu.message.catatan}`, m)
+                naze.sendText(m.chat, `𓂅 𑁍ࠬ  ⊹ *Hari Lahir :* ${anu.message.hari_lahir}\n𓂅 𑁍ࠬ  ⊹ *Tanggal Lahir :* ${anu.message.tgl_lahir}\n𓂅 𑁍ࠬ  ⊹ *Arah Naga Hari :* ${anu.message.arah_naga_hari}\n𓂅 𑁍ࠬ  ⊹ *Catatan :* ${anu.message.catatan}`, m)
             }
             break
             case 'arahrejeki': case 'arahrezeki': {
@@ -2341,7 +2341,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.primbon_arah_rejeki(tgl, bln, thn)
                 if (anu.status == false) return m.reply(anu.message)
-                naze.sendText(m.chat, `⭔ *Hari Lahir :* ${anu.message.hari_lahir}\n⭔ *tanggal Lahir :* ${anu.message.tgl_lahir}\n⭔ *Arah Rezeki :* ${anu.message.arah_rejeki}\n⭔ *Catatan :* ${anu.message.catatan}`, m)
+                naze.sendText(m.chat, `𓂅 𑁍ࠬ  ⊹ *Hari Lahir :* ${anu.message.hari_lahir}\n𓂅 𑁍ࠬ  ⊹ *tanggal Lahir :* ${anu.message.tgl_lahir}\n𓂅 𑁍ࠬ  ⊹ *Arah Rezeki :* ${anu.message.arah_rejeki}\n𓂅 𑁍ࠬ  ⊹ *Catatan :* ${anu.message.catatan}`, m)
             }
             break
             case 'peruntungan': {
@@ -2349,7 +2349,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 let [nama, tgl, bln, thn, untuk] = text.split`,`
                 let anu = await primbon.ramalan_peruntungan(nama, tgl, bln, thn, untuk)
                 if (anu.status == false) return m.reply(anu.message)
-                naze.sendText(m.chat, `⭔ *Nama :* ${anu.message.nama}\n⭔ *Lahir :* ${anu.message.tgl_lahir}\n⭔ *Peruntungan Tahun :* ${anu.message.peruntungan_tahun}\n⭔ *Hasil :* ${anu.message.result}\n⭔ *Catatan :* ${anu.message.catatan}`, m)
+                naze.sendText(m.chat, `𓂅 𑁍ࠬ  ⊹ *Nama :* ${anu.message.nama}\n𓂅 𑁍ࠬ  ⊹ *Lahir :* ${anu.message.tgl_lahir}\n𓂅 𑁍ࠬ  ⊹ *Peruntungan Tahun :* ${anu.message.peruntungan_tahun}\n𓂅 𑁍ࠬ  ⊹ *Hasil :* ${anu.message.result}\n𓂅 𑁍ࠬ  ⊹ *Catatan :* ${anu.message.catatan}`, m)
             }
             break
             case 'weton': case 'wetonjawa': {
@@ -2357,7 +2357,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.weton_jawa(tgl, bln, thn)
                 if (anu.status == false) return m.reply(anu.message)
-                naze.sendText(m.chat, `⭔ *Tanggal :* ${anu.message.tanggal}\n⭔ *Jumlah Neptu :* ${anu.message.jumlah_neptu}\n⭔ *Watak Hari :* ${anu.message.watak_hari}\n⭔ *Naga Hari :* ${anu.message.naga_hari}\n⭔ *Jam Baik :* ${anu.message.jam_baik}\n⭔ *Watak Kelahiran :* ${anu.message.watak_kelahiran}`, m)
+                naze.sendText(m.chat, `𓂅 𑁍ࠬ  ⊹ *Tanggal :* ${anu.message.tanggal}\n𓂅 𑁍ࠬ  ⊹ *Jumlah Neptu :* ${anu.message.jumlah_neptu}\n𓂅 𑁍ࠬ  ⊹ *Watak Hari :* ${anu.message.watak_hari}\n𓂅 𑁍ࠬ  ⊹ *Naga Hari :* ${anu.message.naga_hari}\n𓂅 𑁍ࠬ  ⊹ *Jam Baik :* ${anu.message.jam_baik}\n𓂅 𑁍ࠬ  ⊹ *Watak Kelahiran :* ${anu.message.watak_kelahiran}`, m)
             }
             break
             case 'sifat': case 'karakter': {
@@ -2365,7 +2365,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 let [nama, tgl, bln, thn] = text.split`,`
                 let anu = await primbon.sifat_karakter_tanggal_lahir(nama, tgl, bln, thn)
                 if (anu.status == false) return m.reply(anu.message)
-                naze.sendText(m.chat, `⭔ *Nama :* ${anu.message.nama}\n⭔ *Lahir :* ${anu.message.tgl_lahir}\n⭔ *Garis Hidup :* ${anu.message.garis_hidup}`, m)
+                naze.sendText(m.chat, `𓂅 𑁍ࠬ  ⊹ *Nama :* ${anu.message.nama}\n𓂅 𑁍ࠬ  ⊹ *Lahir :* ${anu.message.tgl_lahir}\n𓂅 𑁍ࠬ  ⊹ *Garis Hidup :* ${anu.message.garis_hidup}`, m)
             }
             break
             case 'keberuntungan': {
@@ -2373,7 +2373,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 let [nama, tgl, bln, thn] = text.split`,`
                 let anu = await primbon.potensi_keberuntungan(nama, tgl, bln, thn)
                 if (anu.status == false) return m.reply(anu.message)
-                naze.sendText(m.chat, `⭔ *Nama :* ${anu.message.nama}\n⭔ *Lahir :* ${anu.message.tgl_lahir}\n⭔ *Hasil :* ${anu.message.result}`, m)
+                naze.sendText(m.chat, `𓂅 𑁍ࠬ  ⊹ *Nama :* ${anu.message.nama}\n𓂅 𑁍ࠬ  ⊹ *Lahir :* ${anu.message.tgl_lahir}\n𓂅 𑁍ࠬ  ⊹ *Hasil :* ${anu.message.result}`, m)
             }
             break
             case 'memancing': {
@@ -2381,7 +2381,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.primbon_memancing_ikan(tgl, bln, thn)
                 if (anu.status == false) return m.reply(anu.message)
-                naze.sendText(m.chat, `⭔ *Hasil :* ${anu.message.result}\n⭔ *Catatan :* ${anu.message.catatan}`, m)
+                naze.sendText(m.chat, `𓂅 𑁍ࠬ  ⊹ *Hasil :* ${anu.message.result}\n𓂅 𑁍ࠬ  ⊹ *Catatan :* ${anu.message.catatan}`, m)
             }
             break
             case 'masasubur': {
@@ -2389,7 +2389,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 let [tgl, bln, thn, siklus] = text.split`,`
                 let anu = await primbon.masa_subur(tgl, bln, thn, siklus)
                 if (anu.status == false) return m.reply(anu.message)
-                naze.sendText(m.chat, `⭔ *Hasil :* ${anu.message.result}\n⭔ *Catatan :* ${anu.message.catatan}`, m)
+                naze.sendText(m.chat, `𓂅 𑁍ࠬ  ⊹ *Hasil :* ${anu.message.result}\n𓂅 𑁍ࠬ  ⊹ *Catatan :* ${anu.message.catatan}`, m)
             }
             break
             case 'zodiak': case 'zodiac': {
@@ -2424,7 +2424,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 
                 let anu = await primbon.zodiak(zodiac)
                 if (anu.status == false) return m.reply(anu.message)
-                naze.sendText(m.chat, `⭔ *Zodiak :* ${anu.message.zodiak}\n⭔ *Nomor :* ${anu.message.nomor_keberuntungan}\n⭔ *Aroma :* ${anu.message.aroma_keberuntungan}\n⭔ *Planet :* ${anu.message.planet_yang_mengitari}\n⭔ *Bunga :* ${anu.message.bunga_keberuntungan}\n⭔ *Warna :* ${anu.message.warna_keberuntungan}\n⭔ *Batu :* ${anu.message.batu_keberuntungan}\n⭔ *Elemen :* ${anu.message.elemen_keberuntungan}\n⭔ *Pasangan Zodiak :* ${anu.message.pasangan_zodiak}\n⭔ *Catatan :* ${anu.message.catatan}`, m)
+                naze.sendText(m.chat, `𓂅 𑁍ࠬ  ⊹ *Zodiak :* ${anu.message.zodiak}\n𓂅 𑁍ࠬ  ⊹ *Nomor :* ${anu.message.nomor_keberuntungan}\n𓂅 𑁍ࠬ  ⊹ *Aroma :* ${anu.message.aroma_keberuntungan}\n𓂅 𑁍ࠬ  ⊹ *Planet :* ${anu.message.planet_yang_mengitari}\n𓂅 𑁍ࠬ  ⊹ *Bunga :* ${anu.message.bunga_keberuntungan}\n𓂅 𑁍ࠬ  ⊹ *Warna :* ${anu.message.warna_keberuntungan}\n𓂅 𑁍ࠬ  ⊹ *Batu :* ${anu.message.batu_keberuntungan}\n𓂅 𑁍ࠬ  ⊹ *Elemen :* ${anu.message.elemen_keberuntungan}\n𓂅 𑁍ࠬ  ⊹ *Pasangan Zodiak :* ${anu.message.pasangan_zodiak}\n𓂅 𑁍ࠬ  ⊹ *Catatan :* ${anu.message.catatan}`, m)
             }
             break
             
@@ -2468,13 +2468,13 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                     if (!id) throw `No Query username, Example : ${prefix + command} ig cak_haho`
                     let { result: anu } = await fetchJson(api('zenz', '/api/stalker/ig', { username: id }, 'apikey'))
                     if (anu.status == false) return m.reply(anu.result.message)
-                    naze.sendMedia(m.chat, anu.caption.profile_hd, '', `⭔ Full Name : ${anu.caption.full_name}\n⭔ User Name : ${anu.caption.user_name}\n⭔ ID ${anu.caption.user_id}\n⭔ Followers : ${anu.caption.followers}\n⭔ Following : ${anu.caption.following}\n⭔ Bussines : ${anu.caption.bussines}\n⭔ Profesional : ${anu.caption.profesional}\n⭔ Verified : ${anu.caption.verified}\n⭔ Private : ${anu.caption.private}\n⭔ Bio : ${anu.caption.biography}\n⭔ Bio Url : ${anu.caption.bio_url}`, m)
+                    naze.sendMedia(m.chat, anu.caption.profile_hd, '', `𓂅 𑁍ࠬ  ⊹ Full Name : ${anu.caption.full_name}\n𓂅 𑁍ࠬ  ⊹ User Name : ${anu.caption.user_name}\n𓂅 𑁍ࠬ  ⊹ ID ${anu.caption.user_id}\n𓂅 𑁍ࠬ  ⊹ Followers : ${anu.caption.followers}\n𓂅 𑁍ࠬ  ⊹ Following : ${anu.caption.following}\n𓂅 𑁍ࠬ  ⊹ Bussines : ${anu.caption.bussines}\n𓂅 𑁍ࠬ  ⊹ Profesional : ${anu.caption.profesional}\n𓂅 𑁍ࠬ  ⊹ Verified : ${anu.caption.verified}\n𓂅 𑁍ࠬ  ⊹ Private : ${anu.caption.private}\n𓂅 𑁍ࠬ  ⊹ Bio : ${anu.caption.biography}\n𓂅 𑁍ࠬ  ⊹ Bio Url : ${anu.caption.bio_url}`, m)
 		    db.data.users[m.sender].limit -= 1
                 } else if (type.toLowerCase() == 'npm') {
                     if (!id) throw `No Query username, Example : ${prefix + command} npm scrape-primbon`
                     let { result: anu } = await fetchJson(api('zenz', '/api/stalker/npm', { query: id }, 'apikey'))
                     if (anu.status == false) return m.reply(anu.result.message)
-                    m.reply(`⭔ Name : ${anu.name}\n⭔ Version : ${Object.keys(anu.versions)}\n⭔ Created : ${tanggal(anu.time.created)}\n⭔ Modified : ${tanggal(anu.time.modified)}\n⭔ Maintainers :\n ${anu.maintainers.map(v => `- ${v.name} : ${v.email}`).join('\n')}\n\n⭔ Description : ${anu.description}\n⭔ Homepage : ${anu.homepage}\n⭔ Keywords : ${anu.keywords}\n⭔ Author : ${anu.author.name}\n⭔ License : ${anu.license}\n⭔ Readme : ${anu.readme}`)
+                    m.reply(`𓂅 𑁍ࠬ  ⊹ Name : ${anu.name}\n𓂅 𑁍ࠬ  ⊹ Version : ${Object.keys(anu.versions)}\n𓂅 𑁍ࠬ  ⊹ Created : ${tanggal(anu.time.created)}\n𓂅 𑁍ࠬ  ⊹ Modified : ${tanggal(anu.time.modified)}\n𓂅 𑁍ࠬ  ⊹ Maintainers :\n ${anu.maintainers.map(v => `- ${v.name} : ${v.email}`).join('\n')}\n\n𓂅 𑁍ࠬ  ⊹ Description : ${anu.description}\n𓂅 𑁍ࠬ  ⊹ Homepage : ${anu.homepage}\n𓂅 𑁍ࠬ  ⊹ Keywords : ${anu.keywords}\n𓂅 𑁍ࠬ  ⊹ Author : ${anu.author.name}\n𓂅 𑁍ࠬ  ⊹ License : ${anu.license}\n𓂅 𑁍ࠬ  ⊹ Readme : ${anu.readme}`)
 		    db.data.users[m.sender].limit -= 1
                 } else {
                     m.reply(`Example : ${prefix +command} type id\n\nList Type :\n1. ff (Free Fire)\n2. ml (Mobile Legends)\n3. aov (Arena Of Valor)\n4. cod (Call Of Duty)\n5. pb (point Blank)\n6. ig (Instagram)\n7. npm (https://npmjs.com)`)
@@ -2486,7 +2486,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 m.reply(mess.wait)
                 let anu = await fetchJson(`https://anabotofc.herokuapp.com/api/download/tiktok2?url=${text}&apikey=AnaBot`)
                 let buttons = [
-                    {buttonId: `allmenu`, buttonText: {displayText: '📖List Menu'}, type: 1},
+                    {buttonId: `allmenu`, buttonText: {displayText: '𝐋𝐢𝐬𝐭 𝐌𝐞𝐧𝐮'}, type: 1},
                     {buttonId: `tiktokmp3 ${text}`, buttonText: {displayText: '♫ Audio'}, type: 1}
                 ]
                 let buttonMessage = {
@@ -2522,7 +2522,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 m.reply(mess.wait)
                 let anu = await fetchJson(`https://anabotofc.herokuapp.com/api/download/tiktok2?url=${text}&apikey=AnaBot`)
                 let buttons = [
-                    {buttonId: `allmenu`, buttonText: {displayText: '📖List Menu'}, type: 1},
+                    {buttonId: `allmenu`, buttonText: {displayText: '𝐋𝐢𝐬𝐭 𝐌𝐞𝐧𝐮'}, type: 1},
                     {buttonId: `tiktoknowm ${text}`, buttonText: {displayText: '► No Watermark'}, type: 1}
                 ]
                 let buttonMessage = {
@@ -2551,7 +2551,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 if (!text) throw 'No Query Title'
                 m.reply(mess.wait)
                 let anu = await fetchJson(api('zenz', '/downloader/joox', { query: text }, 'apikey'))
-                let msg = await naze.sendImage(m.chat, anu.result.img, `⭔ Title : ${anu.result.lagu}\n⭔ Album : ${anu.result.album}\n⭔ Singer : ${anu.result.penyanyi}\n⭔ Publish : ${anu.result.publish}\n⭔ Lirik :\n${anu.result.lirik.result}`, m)
+                let msg = await naze.sendImage(m.chat, anu.result.img, `𓂅 𑁍ࠬ  ⊹ Title : ${anu.result.lagu}\n𓂅 𑁍ࠬ  ⊹ Album : ${anu.result.album}\n𓂅 𑁍ࠬ  ⊹ Singer : ${anu.result.penyanyi}\n𓂅 𑁍ࠬ  ⊹ Publish : ${anu.result.publish}\n𓂅 𑁍ࠬ  ⊹ Lirik :\n${anu.result.lirik.result}`, m)
                 naze.sendMessage(m.chat, { audio: { url: anu.result.mp4aLink }, mimetype: 'audio/mpeg', fileName: anu.result.lagu+'.m4a' }, { quoted: msg })
             }
             break
@@ -2559,7 +2559,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 if (!text) throw 'No Query Title'
                 m.reply(mess.wait)
                 let anu = await fetchJson(api('zenz', '/downloader/soundcloud', { url: isUrl(text)[0] }, 'apikey'))
-                let msg = await naze.sendImage(m.chat, anu.result.thumb, `⭔ Title : ${anu.result.title}\n⭔ Url : ${isUrl(text)[0]}`)
+                let msg = await naze.sendImage(m.chat, anu.result.thumb, `𓂅 𑁍ࠬ  ⊹ Title : ${anu.result.title}\n𓂅 𑁍ࠬ  ⊹ Url : ${isUrl(text)[0]}`)
                 naze.sendMessage(m.chat, { audio: { url: anu.result.url }, mimetype: 'audio/mpeg', fileName: anu.result.title+'.m4a' }, { quoted: msg })
             }
             break
@@ -2602,7 +2602,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 if (!text) throw 'Masukkan Query Link!'
                 m.reply(mess.wait)
                 let anu = await fetchJson(api('zenz', '/api/downloader/facebook', { url: text }, 'apikey'))
-                naze.sendMessage(m.chat, { video: { url: anu.result.url }, caption: `⭔ Title : ${anu.result.title}`}, { quoted: m })
+                naze.sendMessage(m.chat, { video: { url: anu.result.url }, caption: `𓂅 𑁍ࠬ  ⊹ Title : ${anu.result.title}`}, { quoted: m })
             }
             break
 	        case 'pindl': case 'pinterestdl': {
@@ -2624,11 +2624,11 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 		    let buttonMessage = {
 		        image: { url: anu.author.profilePic },
 			caption: `
-⭔ Title : ${anu.title}
-⭔ Author : ${anu.author.name}
-⭔ Like : ${anu.like}
-⭔ Caption : ${anu.caption}
-⭔ Url : ${anu.media[0]}
+𓂅 𑁍ࠬ  ⊹ Title : ${anu.title}
+𓂅 𑁍ࠬ  ⊹ Author : ${anu.author.name}
+𓂅 𑁍ࠬ  ⊹ Like : ${anu.like}
+𓂅 𑁍ࠬ  ⊹ Caption : ${anu.caption}
+𓂅 𑁍ࠬ  ⊹ Url : ${anu.media[0]}
 Untuk Download Media Silahkan Klik salah satu Button dibawah ini atau masukkan command ytmp3/ytmp4 dengan url diatas
 `,
 			footer: naze.user.name,
@@ -2638,7 +2638,7 @@ Untuk Download Media Silahkan Klik salah satu Button dibawah ini atau masukkan c
 		    naze.sendMessage(m.chat, buttonMessage, { quoted: m })
 		} else if (anu.type == 'image') {
 		    anu.media.map(async (url) => {
-		        naze.sendMessage(m.chat, { image: { url }, caption: `⭔ Title : ${anu.title}\n⭔ Author : ${anu.author.name}\n⭔ Like : ${anu.like}\n⭔ Caption : ${anu.caption}` }, { quoted: m })
+		        naze.sendMessage(m.chat, { image: { url }, caption: `𓂅 𑁍ࠬ  ⊹ Title : ${anu.title}\n𓂅 𑁍ࠬ  ⊹ Author : ${anu.author.name}\n𓂅 𑁍ࠬ  ⊹ Like : ${anu.like}\n𓂅 𑁍ࠬ  ⊹ Caption : ${anu.caption}` }, { quoted: m })
 		    })
 		}
 	    }
@@ -2745,12 +2745,12 @@ ${id}`)
 		case 'playstore': {
             if (!text) throw `Example : ${prefix + command} clash of clans`
             let res = await fetchJson(api('zenz', '/webzone/playstore', { query: text }, 'apikey'))
-            let teks = `⭔ Playstore Search From : ${text}\n\n`
+            let teks = `𓂅 𑁍ࠬ  ⊹ Playstore Search From : ${text}\n\n`
             for (let i of res.result) {
-            teks += `⭔ Name : ${i.name}\n`
-            teks += `⭔ Link : ${i.link}\n`
-            teks += `⭔ Developer : ${i.developer}\n`
-            teks += `⭔ Link Developer : ${i.link_dev}\n\n──────────────────────\n`
+            teks += `𓂅 𑁍ࠬ  ⊹ Name : ${i.name}\n`
+            teks += `𓂅 𑁍ࠬ  ⊹ Link : ${i.link}\n`
+            teks += `𓂅 𑁍ࠬ  ⊹ Developer : ${i.developer}\n`
+            teks += `𓂅 𑁍ࠬ  ⊹ Link Developer : ${i.link_dev}\n\n──────────────────────\n`
             }
             m.reply(teks)
             }
@@ -2759,20 +2759,20 @@ ${id}`)
             if (!text) throw `Example : ${prefix + command} samsung`
             let res = await fetchJson(api('zenz', '/webzone/gsmarena', { query: text }, 'apikey'))
             let { judul, rilis, thumb, ukuran, type, storage, display, inchi, pixel, videoPixel, ram, chipset, batrai, merek_batre, detail } = res.result
-let capt = `⭔ Title: ${judul}
-⭔ Realease: ${rilis}
-⭔ Size: ${ukuran}
-⭔ Type: ${type}
-⭔ Storage: ${storage}
-⭔ Display: ${display}
-⭔ Inchi: ${inchi}
-⭔ Pixel: ${pixel}
-⭔ Video Pixel: ${videoPixel}
-⭔ Ram: ${ram}
-⭔ Chipset: ${chipset}
-⭔ Battery: ${batrai}
-⭔ Battery Brand: ${merek_batre}
-⭔ Detail: ${detail}`
+let capt = `𓂅 𑁍ࠬ  ⊹ Title: ${judul}
+𓂅 𑁍ࠬ  ⊹ Realease: ${rilis}
+𓂅 𑁍ࠬ  ⊹ Size: ${ukuran}
+𓂅 𑁍ࠬ  ⊹ Type: ${type}
+𓂅 𑁍ࠬ  ⊹ Storage: ${storage}
+𓂅 𑁍ࠬ  ⊹ Display: ${display}
+𓂅 𑁍ࠬ  ⊹ Inchi: ${inchi}
+𓂅 𑁍ࠬ  ⊹ Pixel: ${pixel}
+𓂅 𑁍ࠬ  ⊹ Video Pixel: ${videoPixel}
+𓂅 𑁍ࠬ  ⊹ Ram: ${ram}
+𓂅 𑁍ࠬ  ⊹ Chipset: ${chipset}
+𓂅 𑁍ࠬ  ⊹ Battery: ${batrai}
+𓂅 𑁍ࠬ  ⊹ Battery Brand: ${merek_batre}
+𓂅 𑁍ࠬ  ⊹ Detail: ${detail}`
             naze.sendImage(m.chat, thumb, capt, m)
             }
             break
@@ -2781,9 +2781,9 @@ let capt = `⭔ Title: ${judul}
             let res = await fetchJson(api('zenz', '/webzone/jadwalbioskop', { kota: text }, 'apikey'))
             let capt = `Jadwal Bioskop From : ${text}\n\n`
             for (let i of res.result){
-            capt += `⭔ Title: ${i.title}\n`
-            capt += `⭔ Thumbnail: ${i.thumb}\n`
-            capt += `⭔ Url: ${i.url}\n\n──────────────────────\n`
+            capt += `𓂅 𑁍ࠬ  ⊹ Title: ${i.title}\n`
+            capt += `𓂅 𑁍ࠬ  ⊹ Thumbnail: ${i.thumb}\n`
+            capt += `𓂅 𑁍ࠬ  ⊹ Url: ${i.url}\n\n──────────────────────\n`
             }
             naze.sendImage(m.chat, res.result[0].thumb, capt, m)
             }
@@ -2792,9 +2792,9 @@ let capt = `⭔ Title: ${judul}
             let res = await fetchJson(api('zenz', '/webzone/nowplayingbioskop', {}, 'apikey'))
             let capt = `Now Playing Bioskop\n\n`
             for (let i of res.result){
-            capt += `⭔ Title: ${i.title}\n`
-            capt += `⭔ Url: ${i.url}\n`
-            capt += `⭔ Img Url: ${i.img}\n\n──────────────────────\n`
+            capt += `𓂅 𑁍ࠬ  ⊹ Title: ${i.title}\n`
+            capt += `𓂅 𑁍ࠬ  ⊹ Url: ${i.url}\n`
+            capt += `𓂅 𑁍ࠬ  ⊹ Img Url: ${i.img}\n\n──────────────────────\n`
             }
             naze.sendImage(m.chat, res.result[0].img, capt, m)
             }
@@ -2804,11 +2804,11 @@ let capt = `⭔ Title: ${judul}
             let res = await fetchJson(api('zenz', '/webzone/amino', { query: text }, 'apikey'))
             let capt = `Amino Search From : ${text}\n\n`
             for (let i of res.result){
-            capt += `⭔ Community: ${i.community}\n`
-            capt += `⭔ Community Link: ${i.community_link}\n`
-            capt += `⭔ Thumbnail: ${i.community_thumb}\n`
-            capt += `⭔ Description: ${i.community_desc}\n`
-            capt += `⭔ Member Count: ${i.member_count}\n\n──────────────────────\n`
+            capt += `𓂅 𑁍ࠬ  ⊹ Community: ${i.community}\n`
+            capt += `𓂅 𑁍ࠬ  ⊹ Community Link: ${i.community_link}\n`
+            capt += `𓂅 𑁍ࠬ  ⊹ Thumbnail: ${i.community_thumb}\n`
+            capt += `𓂅 𑁍ࠬ  ⊹ Description: ${i.community_desc}\n`
+            capt += `𓂅 𑁍ࠬ  ⊹ Member Count: ${i.member_count}\n\n──────────────────────\n`
             }
             naze.sendImage(m.chat, 'https://'+res.result[0].community_thumb, capt, m)
             }
@@ -2818,13 +2818,13 @@ let capt = `⭔ Title: ${judul}
             let res = await fetchJson(api('zenz', '/webzone/wattpad', { query: text }, 'apikey'))
             let { judul, dibaca, divote, bab, waktu, url, thumb, description } = res.result[0]
             let capt = `Wattpad From ${text}\n\n`
-            capt += `⭔ Judul: ${judul}\n`
-            capt += `⭔ Dibaca: ${dibaca}\n`
-            capt += `⭔ Divote: ${divote}\n`
-            capt += `⭔ Bab: ${bab}\n`
-            capt += `⭔ Waktu: ${waktu}\n`
-            capt += `⭔ Url: ${url}\n`
-            capt += `⭔ Deskripsi: ${description}`
+            capt += `𓂅 𑁍ࠬ  ⊹ Judul: ${judul}\n`
+            capt += `𓂅 𑁍ࠬ  ⊹ Dibaca: ${dibaca}\n`
+            capt += `𓂅 𑁍ࠬ  ⊹ Divote: ${divote}\n`
+            capt += `𓂅 𑁍ࠬ  ⊹ Bab: ${bab}\n`
+            capt += `𓂅 𑁍ࠬ  ⊹ Waktu: ${waktu}\n`
+            capt += `𓂅 𑁍ࠬ  ⊹ Url: ${url}\n`
+            capt += `𓂅 𑁍ࠬ  ⊹ Deskripsi: ${description}`
             naze.sendImage(m.chat, thumb, capt, m)
             }
             break
@@ -2833,11 +2833,11 @@ let capt = `⭔ Title: ${judul}
             let res = await fetchJson(api('zenz', '/webzone/webtoons', { query: text }, 'apikey'))
             let capt = `Webtoons Search From : ${text}\n\n`
             for (let i of res.result) {
-            capt += `⭔ Judul: ${i.judul}\n`
-            capt += `⭔ Like: ${i.like}\n`
-            capt += `⭔ Creator: ${i.creator}\n`
-            capt += `⭔ Genre: ${i.genre}\n`
-            capt += `⭔ Url: ${i.url}\n\n──────────────────────\n`
+            capt += `𓂅 𑁍ࠬ  ⊹ Judul: ${i.judul}\n`
+            capt += `𓂅 𑁍ࠬ  ⊹ Like: ${i.like}\n`
+            capt += `𓂅 𑁍ࠬ  ⊹ Creator: ${i.creator}\n`
+            capt += `𓂅 𑁍ࠬ  ⊹ Genre: ${i.genre}\n`
+            capt += `𓂅 𑁍ࠬ  ⊹ Url: ${i.url}\n\n──────────────────────\n`
             }
             m.reply(capt)
             }
@@ -2847,11 +2847,11 @@ let capt = `⭔ Title: ${judul}
             let res = await fetchJson(api('zenz', '/webzone/drakor', { query: text }, 'apikey'))
             let capt = `Drakor Search From : ${text}\n\n`
             for (let i of res.result) {
-            capt += `⭔ Judul: ${i.judul}\n`
-            capt += `⭔ Years: ${i.years}\n`
-            capt += `⭔ Genre: ${i.genre}\n`
-            capt += `⭔ Url: ${i.url}\n`
-            capt += `⭔ Thumbnail Url: ${i.thumbnail}\n\n──────────────────────\n`
+            capt += `𓂅 𑁍ࠬ  ⊹ Judul: ${i.judul}\n`
+            capt += `𓂅 𑁍ࠬ  ⊹ Years: ${i.years}\n`
+            capt += `𓂅 𑁍ࠬ  ⊹ Genre: ${i.genre}\n`
+            capt += `𓂅 𑁍ࠬ  ⊹ Url: ${i.url}\n`
+            capt += `𓂅 𑁍ࠬ  ⊹ Thumbnail Url: ${i.thumbnail}\n\n──────────────────────\n`
             }
             naze.sendImage(m.chat, res.result[0].thumbnail, capt, m)
             }
@@ -2864,7 +2864,7 @@ rules = `┌──⭓ *Rules BOT*
 │ *Intinya Jangan Spam❗*
 │
 └───────⭓`
-let buttons = [{ buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '👑Sewa' }, type: 1 }]
+let buttons = [{ buttonId: 'allmenu', buttonText: { displayText: '𝐋𝐢𝐬𝐭 𝐌𝐞𝐧𝐮' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '👑Sewa' }, type: 1 }]
             await naze.sendButtonText(m.chat, buttons, rules, nyoutube, m, {quoted: fkontak})
             }
             break
@@ -2887,7 +2887,7 @@ let alfamart = `628111500959@s.whatsapp.net`
 -Creator :  @${ownernya.split('@')[0]}\n-Lu : @${me.split('@')[0]}\n-Powered  : @${ini_mark.split('@')[0]}\n- :  @${qontak.split('@')[0]}\n- :  @${dana.split('@')[0]}\n- :  @${shopeeotp.split('@')[0]}\n- :  @${shopee.split('@')[0]}\n- :  @${tokopedia.split('@')[0]}\n- :  @${smartfrend.split('@')[0]}\n- :  @${getcontact.split('@')[0]}\n- :  @${facebook.split('@')[0]}\n- :  @${pasarpolis.split('@')[0]}\n- :  @${getcontact.split('@')[0]}\n- :  @${kominfo.split('@')[0]}\n- :  @${alfamart.split('@')[0]}`
             let ments = [ownernya, me, ini_mark, qontak, dana, shopeeotp, shopee, tokopedia, smartfrend, getcontact, facebook, pasarpolis, kominfo, alfamart]
             let buttons = [
-                        { buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 }
+                        { buttonId: 'allmenu', buttonText: { displayText: '𝐋𝐢𝐬𝐭 𝐌𝐞𝐧𝐮' }, type: 1 }
                     ]
                     await naze.sendButtonText(m.chat, buttons, jawab, naze.user.name, m, {mentions: ments})
             }
@@ -2918,7 +2918,7 @@ let alfamart = `628111500959@s.whatsapp.net`
 ├ *Wit* : ${timur} WIT
 ╰──❍`
             let ments = [ownernya, me, ini_mark]
-            let buttons = [{ buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 },{ buttonId: 'rules', buttonText: { displayText: '❗Rules' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 }]
+            let buttons = [{ buttonId: 'allmenu', buttonText: { displayText: '𝐋𝐢𝐬𝐭 𝐌𝐞𝐧𝐮' }, type: 1 },{ buttonId: 'rules', buttonText: { displayText: '𝐑𝐮𝐥𝐞𝐬 𝐁𝐨𝐭' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '𝐃𝐨𝐧𝐚𝐬𝐢' }, type: 1 }]
             await naze.sendButtonText(m.chat, buttons, jawab, nyoutube, m, {mentions: ments, quoted: fkontak})
             }
             break
@@ -2976,388 +2976,388 @@ let alfamart = `628111500959@s.whatsapp.net`
             case 'mgroup': {
 goup = `┌──⭓ *Group Menu*
 │
-│⭔ ${prefix}linkgroup
-│⭔ ${prefix}ephemeral [option]
-│⭔ ${prefix}setppgc [image]
-│⭔ ${prefix}setname [text]
-│⭔ ${prefix}setdesc [text]
-│⭔ ${prefix}group [option]
-│⭔ ${prefix}editinfo [option]
-│⭔ ${prefix}add @user
-│⭔ ${prefix}kick @user
-│⭔ ${prefix}hidetag [text]
-│⭔ ${prefix}tagall [text]
-│⭔ ${prefix}antilink [on/off]
-│⭔ ${prefix}mute [on/off]
-│⭔ ${prefix}promote @user
-│⭔ ${prefix}demote @user
-│⭔ ${prefix}vote [text]
-│⭔ ${prefix}devote
-│⭔ ${prefix}upvote
-│⭔ ${prefix}cekvote
-│⭔ ${prefix}hapusvote
+│𓂅 𑁍ࠬ  ⊹ ${prefix}linkgroup
+│𓂅 𑁍ࠬ  ⊹ ${prefix}ephemeral [option]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}setppgc [image]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}setname [text]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}setdesc [text]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}group [option]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}editinfo [option]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}add @user
+│𓂅 𑁍ࠬ  ⊹ ${prefix}kick @user
+│𓂅 𑁍ࠬ  ⊹ ${prefix}hidetag [text]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}tagall [text]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}antilink [on/off]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}mute [on/off]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}promote @user
+│𓂅 𑁍ࠬ  ⊹ ${prefix}demote @user
+│𓂅 𑁍ࠬ  ⊹ ${prefix}vote [text]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}devote
+│𓂅 𑁍ࠬ  ⊹ ${prefix}upvote
+│𓂅 𑁍ࠬ  ⊹ ${prefix}cekvote
+│𓂅 𑁍ࠬ  ⊹ ${prefix}hapusvote
 │
 └───────⭓`
-let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '⬅️Back' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 }]
+let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '𝐊𝐞𝐦𝐛𝐚𝐥𝐢' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '𝐋𝐢𝐬𝐭 𝐌𝐞𝐧𝐮' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '𝐃𝐨𝐧𝐚𝐬𝐢' }, type: 1 }]
             await naze.sendButtonText(m.chat, buttons, goup, nyoutube, m, {quoted: fkontak})
             }
             break
       case 'mwebzone': {
 wbzone = `┌──⭓ *Webzone Menu*
 │
-│⭔ ${prefix}playstore
-│⭔ ${prefix}gsmarena
-│⭔ ${prefix}jadwalbioskop
-│⭔ ${prefix}nowplayingbioskop
-│⭔ ${prefix}aminio
-│⭔ ${prefix}wattpad
-│⭔ ${prefix}webtoons
-│⭔ ${prefix}drakor
+│𓂅 𑁍ࠬ  ⊹ ${prefix}playstore
+│𓂅 𑁍ࠬ  ⊹ ${prefix}gsmarena
+│𓂅 𑁍ࠬ  ⊹ ${prefix}jadwalbioskop
+│𓂅 𑁍ࠬ  ⊹ ${prefix}nowplayingbioskop
+│𓂅 𑁍ࠬ  ⊹ ${prefix}aminio
+│𓂅 𑁍ࠬ  ⊹ ${prefix}wattpad
+│𓂅 𑁍ࠬ  ⊹ ${prefix}webtoons
+│𓂅 𑁍ࠬ  ⊹ ${prefix}drakor
 │
 └───────⭓`
-let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '⬅️Back' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 }]
+let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '𝐊𝐞𝐦𝐛𝐚𝐥𝐢' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '𝐋𝐢𝐬𝐭 𝐌𝐞𝐧𝐮' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '𝐃𝐨𝐧𝐚𝐬𝐢' }, type: 1 }]
             await naze.sendButtonText(m.chat, buttons, wbzone, nyoutube, m, {quoted: fkontak})
             }
             break
             case 'mdownloader': {
 dwnloader = `┌──⭓ *Downloader Menu*
 │
-│⭔ ${prefix}tiktoknowm [url]
-│⭔ ${prefix}tiktokwm [url]
-│⭔ ${prefix}tiktokmp3 [url]
-│⭔ ${prefix}instagram [url]
-│⭔ ${prefix}twitter [url]
-│⭔ ${prefix}twittermp3 [url]
-│⭔ ${prefix}facebook [url]
-│⭔ ${prefix}pinterestdl [url]
-│⭔ ${prefix}ytmp3 [url]
-│⭔ ${prefix}ytmp4 [url]
-│⭔ ${prefix}getmusic [query]
-│⭔ ${prefix}getvideo [query]
-│⭔ ${prefix}umma [url]
-│⭔ ${prefix}joox [query]
-│⭔ ${prefix}soundcloud [url]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}tiktoknowm [url]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}tiktokwm [url]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}tiktokmp3 [url]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}instagram [url]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}twitter [url]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}twittermp3 [url]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}facebook [url]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}pinterestdl [url]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}ytmp3 [url]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}ytmp4 [url]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}getmusic [query]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}getvideo [query]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}umma [url]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}joox [query]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}soundcloud [url]
 │
 └───────⭓`
-let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '⬅️Back' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 }]
+let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '𝐊𝐞𝐦𝐛𝐚𝐥𝐢' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '𝐋𝐢𝐬𝐭 𝐌𝐞𝐧𝐮' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '𝐃𝐨𝐧𝐚𝐬𝐢' }, type: 1 }]
             await naze.sendButtonText(m.chat, buttons, dwnloader, nyoutube, m, {quoted: fkontak})
             }
             break
             case 'msearch': {
 sarch = `┌──⭓ *Search Menu*
 │
-│⭔ ${prefix}play [query]
-│⭔ ${prefix}yts [query]
-│⭔ ${prefix}google [query]
-│⭔ ${prefix}gimage [query]
-│⭔ ${prefix}pinterest [query]
-│⭔ ${prefix}wallpaper [query]
-│⭔ ${prefix}wikimedia [query]
-│⭔ ${prefix}ytsearch [query]
-│⭔ ${prefix}ringtone [query]
-│⭔ ${prefix}stalk [option] [query]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}play [query]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}yts [query]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}google [query]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}gimage [query]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}pinterest [query]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}wallpaper [query]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}wikimedia [query]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}ytsearch [query]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}ringtone [query]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}stalk [option] [query]
 │
 └───────⭓`
-let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '⬅️Back' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 }]
+let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '𝐊𝐞𝐦𝐛𝐚𝐥𝐢' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '𝐋𝐢𝐬𝐭 𝐌𝐞𝐧𝐮' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '𝐃𝐨𝐧𝐚𝐬𝐢' }, type: 1 }]
             await naze.sendButtonText(m.chat, buttons, sarch, nyoutube, m, {quoted: fkontak})
             }
             break
             case 'mrandom': {
 rndom = `┌──⭓ *Random Menu*
 │
-│⭔ ${prefix}gbtku
-│⭔ ${prefix}coffe
-│⭔ ${prefix}quotesanime
-│⭔ ${prefix}motivasi
-│⭔ ${prefix}dilanquote
-│⭔ ${prefix}bucinquote
-│⭔ ${prefix}katasenja
-│⭔ ${prefix}puisi
-│⭔ ${prefix}couple
-│⭔ ${prefix}anime
-│⭔ ${prefix}waifu
+│𓂅 𑁍ࠬ  ⊹ ${prefix}gbtku
+│𓂅 𑁍ࠬ  ⊹ ${prefix}coffe
+│𓂅 𑁍ࠬ  ⊹ ${prefix}quotesanime
+│𓂅 𑁍ࠬ  ⊹ ${prefix}motivasi
+│𓂅 𑁍ࠬ  ⊹ ${prefix}dilanquote
+│𓂅 𑁍ࠬ  ⊹ ${prefix}bucinquote
+│𓂅 𑁍ࠬ  ⊹ ${prefix}katasenja
+│𓂅 𑁍ࠬ  ⊹ ${prefix}puisi
+│𓂅 𑁍ࠬ  ⊹ ${prefix}couple
+│𓂅 𑁍ࠬ  ⊹ ${prefix}anime
+│𓂅 𑁍ࠬ  ⊹ ${prefix}waifu
 │
 └───────⭓`
-let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '⬅️Back' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 }]
+let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '𝐊𝐞𝐦𝐛𝐚𝐥𝐢' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '𝐋𝐢𝐬𝐭 𝐌𝐞𝐧𝐮' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '𝐃𝐨𝐧𝐚𝐬𝐢' }, type: 1 }]
             await naze.sendButtonText(m.chat, buttons, rndom, nyoutube, m, {quoted: fkontak})
             }
             break
             case 'mtextpro': {
 txtpro = `┌──⭓ *Text Pro Menu*
 │
-│⭔ ${prefix}3dchristmas
-│⭔ ${prefix}3ddeepsea
-│⭔ ${prefix}americanflag
-│⭔ ${prefix}3dscifi
-│⭔ ${prefix}3drainbow
-│⭔ ${prefix}3dwaterpipe
-│⭔ ${prefix}halloweenskeleton
-│⭔ ${prefix}sketch
-│⭔ ${prefix}bluecircuit
-│⭔ ${prefix}space
-│⭔ ${prefix}metallic
-│⭔ ${prefix}fiction
-│⭔ ${prefix}greenhorror
-│⭔ ${prefix}transformer
-│⭔ ${prefix}berry
-│⭔ ${prefix}thunder
-│⭔ ${prefix}magma
-│⭔ ${prefix}3dcrackedstone
-│⭔ ${prefix}3dneonlight
-│⭔ ${prefix}impressiveglitch
-│⭔ ${prefix}naturalleaves
-│⭔ ${prefix}fireworksparkle
-│⭔ ${prefix}matrix
-│⭔ ${prefix}dropwater
-│⭔ ${prefix}harrypotter
-│⭔ ${prefix}foggywindow
-│⭔ ${prefix}neondevils
-│⭔ ${prefix}christmasholiday
-│⭔ ${prefix}3dgradient
-│⭔ ${prefix}blackpink
-│⭔ ${prefix}gluetext
+│𓂅 𑁍ࠬ  ⊹ ${prefix}3dchristmas
+│𓂅 𑁍ࠬ  ⊹ ${prefix}3ddeepsea
+│𓂅 𑁍ࠬ  ⊹ ${prefix}americanflag
+│𓂅 𑁍ࠬ  ⊹ ${prefix}3dscifi
+│𓂅 𑁍ࠬ  ⊹ ${prefix}3drainbow
+│𓂅 𑁍ࠬ  ⊹ ${prefix}3dwaterpipe
+│𓂅 𑁍ࠬ  ⊹ ${prefix}halloweenskeleton
+│𓂅 𑁍ࠬ  ⊹ ${prefix}sketch
+│𓂅 𑁍ࠬ  ⊹ ${prefix}bluecircuit
+│𓂅 𑁍ࠬ  ⊹ ${prefix}space
+│𓂅 𑁍ࠬ  ⊹ ${prefix}metallic
+│𓂅 𑁍ࠬ  ⊹ ${prefix}fiction
+│𓂅 𑁍ࠬ  ⊹ ${prefix}greenhorror
+│𓂅 𑁍ࠬ  ⊹ ${prefix}transformer
+│𓂅 𑁍ࠬ  ⊹ ${prefix}berry
+│𓂅 𑁍ࠬ  ⊹ ${prefix}thunder
+│𓂅 𑁍ࠬ  ⊹ ${prefix}magma
+│𓂅 𑁍ࠬ  ⊹ ${prefix}3dcrackedstone
+│𓂅 𑁍ࠬ  ⊹ ${prefix}3dneonlight
+│𓂅 𑁍ࠬ  ⊹ ${prefix}impressiveglitch
+│𓂅 𑁍ࠬ  ⊹ ${prefix}naturalleaves
+│𓂅 𑁍ࠬ  ⊹ ${prefix}fireworksparkle
+│𓂅 𑁍ࠬ  ⊹ ${prefix}matrix
+│𓂅 𑁍ࠬ  ⊹ ${prefix}dropwater
+│𓂅 𑁍ࠬ  ⊹ ${prefix}harrypotter
+│𓂅 𑁍ࠬ  ⊹ ${prefix}foggywindow
+│𓂅 𑁍ࠬ  ⊹ ${prefix}neondevils
+│𓂅 𑁍ࠬ  ⊹ ${prefix}christmasholiday
+│𓂅 𑁍ࠬ  ⊹ ${prefix}3dgradient
+│𓂅 𑁍ࠬ  ⊹ ${prefix}blackpink
+│𓂅 𑁍ࠬ  ⊹ ${prefix}gluetext
 │
 └───────⭓`
-let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '⬅️Back' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 }]
+let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '𝐊𝐞𝐦𝐛𝐚𝐥𝐢' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '𝐋𝐢𝐬𝐭 𝐌𝐞𝐧𝐮' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '𝐃𝐨𝐧𝐚𝐬𝐢' }, type: 1 }]
             await naze.sendButtonText(m.chat, buttons, txtpro, nyoutube, m, {quoted: fkontak})
             }
             break
             case 'mphotooxy': {
 potooxy = `┌──⭓ *Photo Oxy Menu*
 │
-│⭔ ${prefix}shadow
-│⭔ ${prefix}romantic
-│⭔ ${prefix}smoke
-│⭔ ${prefix}burnpapper
-│⭔ ${prefix}naruto
-│⭔ ${prefix}lovemsg
-│⭔ ${prefix}grassmsg
-│⭔ ${prefix}lovetext
-│⭔ ${prefix}coffecup
-│⭔ ${prefix}butterfly
-│⭔ ${prefix}harrypotter
-│⭔ ${prefix}retrolol
+│𓂅 𑁍ࠬ  ⊹ ${prefix}shadow
+│𓂅 𑁍ࠬ  ⊹ ${prefix}romantic
+│𓂅 𑁍ࠬ  ⊹ ${prefix}smoke
+│𓂅 𑁍ࠬ  ⊹ ${prefix}burnpapper
+│𓂅 𑁍ࠬ  ⊹ ${prefix}naruto
+│𓂅 𑁍ࠬ  ⊹ ${prefix}lovemsg
+│𓂅 𑁍ࠬ  ⊹ ${prefix}grassmsg
+│𓂅 𑁍ࠬ  ⊹ ${prefix}lovetext
+│𓂅 𑁍ࠬ  ⊹ ${prefix}coffecup
+│𓂅 𑁍ࠬ  ⊹ ${prefix}butterfly
+│𓂅 𑁍ࠬ  ⊹ ${prefix}harrypotter
+│𓂅 𑁍ࠬ  ⊹ ${prefix}retrolol
 │
 └───────⭓`
-let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '⬅️Back' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 }]
+let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '𝐊𝐞𝐦𝐛𝐚𝐥𝐢' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '𝐋𝐢𝐬𝐭 𝐌𝐞𝐧𝐮' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '𝐃𝐨𝐧𝐚𝐬𝐢' }, type: 1 }]
             await naze.sendButtonText(m.chat, buttons, potooxy, nyoutube, m, {quoted: fkontak})
             }
             break
             case 'mephoto': {
 ehoto = `┌──⭓ *Ephoto Menu*
 │
-│⭔ ${prefix}ffcover
-│⭔ ${prefix}crossfire
-│⭔ ${prefix}galaxy
-│⭔ ${prefix}glass
-│⭔ ${prefix}neon
-│⭔ ${prefix}beach
-│⭔ ${prefix}blackpink
-│⭔ ${prefix}igcertificate
-│⭔ ${prefix}ytcertificate
+│𓂅 𑁍ࠬ  ⊹ ${prefix}ffcover
+│𓂅 𑁍ࠬ  ⊹ ${prefix}crossfire
+│𓂅 𑁍ࠬ  ⊹ ${prefix}galaxy
+│𓂅 𑁍ࠬ  ⊹ ${prefix}glass
+│𓂅 𑁍ࠬ  ⊹ ${prefix}neon
+│𓂅 𑁍ࠬ  ⊹ ${prefix}beach
+│𓂅 𑁍ࠬ  ⊹ ${prefix}blackpink
+│𓂅 𑁍ࠬ  ⊹ ${prefix}igcertificate
+│𓂅 𑁍ࠬ  ⊹ ${prefix}ytcertificate
 │
 └───────⭓`
-let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '⬅️Back' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 }]
+let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '𝐊𝐞𝐦𝐛𝐚𝐥𝐢' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '𝐋𝐢𝐬𝐭 𝐌𝐞𝐧𝐮' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '𝐃𝐨𝐧𝐚𝐬𝐢' }, type: 1 }]
             await naze.sendButtonText(m.chat, buttons, ehoto, nyoutube, m, {quoted: fkontak})
             }
             break
            case 'mfun': {
 mun = `┌──⭓ *Fun Menu*
 │
-│⭔ ${prefix}simih
-│⭔ ${prefix}halah
-│⭔ ${prefix}hilih
-│⭔ ${prefix}huluh
-│⭔ ${prefix}heleh
-│⭔ ${prefix}holoh
-│⭔ ${prefix}jadian
-│⭔ ${prefix}jodohku
-│⭔ ${prefix}apakah
-│⭔ ${prefix}bisakah
-│⭔ ${prefix}kapan
-│⭔ ${prefix}slot
-│⭔ ${prefix}delttt
-│⭔ ${prefix}tictactoe
-│⭔ ${prefix}family100
-│⭔ ${prefix}tebak [option]
-│⭔ ${prefix}math [mode]
-│⭔ ${prefix}suitpvp [@tag]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}simih
+│𓂅 𑁍ࠬ  ⊹ ${prefix}halah
+│𓂅 𑁍ࠬ  ⊹ ${prefix}hilih
+│𓂅 𑁍ࠬ  ⊹ ${prefix}huluh
+│𓂅 𑁍ࠬ  ⊹ ${prefix}heleh
+│𓂅 𑁍ࠬ  ⊹ ${prefix}holoh
+│𓂅 𑁍ࠬ  ⊹ ${prefix}jadian
+│𓂅 𑁍ࠬ  ⊹ ${prefix}jodohku
+│𓂅 𑁍ࠬ  ⊹ ${prefix}apakah
+│𓂅 𑁍ࠬ  ⊹ ${prefix}bisakah
+│𓂅 𑁍ࠬ  ⊹ ${prefix}kapan
+│𓂅 𑁍ࠬ  ⊹ ${prefix}slot
+│𓂅 𑁍ࠬ  ⊹ ${prefix}delttt
+│𓂅 𑁍ࠬ  ⊹ ${prefix}tictactoe
+│𓂅 𑁍ࠬ  ⊹ ${prefix}family100
+│𓂅 𑁍ࠬ  ⊹ ${prefix}tebak [option]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}math [mode]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}suitpvp [@tag]
 │
 └───────⭓`
-let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '⬅️Back' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 }]
+let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '𝐊𝐞𝐦𝐛𝐚𝐥𝐢' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '𝐋𝐢𝐬𝐭 𝐌𝐞𝐧𝐮' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '𝐃𝐨𝐧𝐚𝐬𝐢' }, type: 1 }]
             await naze.sendButtonText(m.chat, buttons, mun, nyoutube, m, {quoted: fkontak})
             }
             break
             case 'mprimbon': {
 pimbon = `┌──⭓ *Primbon Menu*
 │
-│⭔ ${prefix}nomorhoki
-│⭔ ${prefix}artimimpi
-│⭔ ${prefix}artinama
-│⭔ ${prefix}ramaljodoh
-│⭔ ${prefix}ramaljodohbali
-│⭔ ${prefix}suamiistri
-│⭔ ${prefix}ramalcinta
-│⭔ ${prefix}cocoknama
-│⭔ ${prefix}pasangan
-│⭔ ${prefix}jadiannikah
-│⭔ ${prefix}sifatusaha
-│⭔ ${prefix}rezeki
-│⭔ ${prefix}pekerjaan
-│⭔ ${prefix}nasib
-│⭔ ${prefix}penyakit
-│⭔ ${prefix}tarot
-│⭔ ${prefix}fengshui
-│⭔ ${prefix}haribaik
-│⭔ ${prefix}harisangar
-│⭔ ${prefix}harisial
-│⭔ ${prefix}nagahari
-│⭔ ${prefix}arahrezeki
-│⭔ ${prefix}peruntungan
-│⭔ ${prefix}weton
-│⭔ ${prefix}karakter
-│⭔ ${prefix}keberuntungan
-│⭔ ${prefix}memancing
-│⭔ ${prefix}masasubur
-│⭔ ${prefix}zodiak
+│𓂅 𑁍ࠬ  ⊹ ${prefix}nomorhoki
+│𓂅 𑁍ࠬ  ⊹ ${prefix}artimimpi
+│𓂅 𑁍ࠬ  ⊹ ${prefix}artinama
+│𓂅 𑁍ࠬ  ⊹ ${prefix}ramaljodoh
+│𓂅 𑁍ࠬ  ⊹ ${prefix}ramaljodohbali
+│𓂅 𑁍ࠬ  ⊹ ${prefix}suamiistri
+│𓂅 𑁍ࠬ  ⊹ ${prefix}ramalcinta
+│𓂅 𑁍ࠬ  ⊹ ${prefix}cocoknama
+│𓂅 𑁍ࠬ  ⊹ ${prefix}pasangan
+│𓂅 𑁍ࠬ  ⊹ ${prefix}jadiannikah
+│𓂅 𑁍ࠬ  ⊹ ${prefix}sifatusaha
+│𓂅 𑁍ࠬ  ⊹ ${prefix}rezeki
+│𓂅 𑁍ࠬ  ⊹ ${prefix}pekerjaan
+│𓂅 𑁍ࠬ  ⊹ ${prefix}nasib
+│𓂅 𑁍ࠬ  ⊹ ${prefix}penyakit
+│𓂅 𑁍ࠬ  ⊹ ${prefix}tarot
+│𓂅 𑁍ࠬ  ⊹ ${prefix}fengshui
+│𓂅 𑁍ࠬ  ⊹ ${prefix}haribaik
+│𓂅 𑁍ࠬ  ⊹ ${prefix}harisangar
+│𓂅 𑁍ࠬ  ⊹ ${prefix}harisial
+│𓂅 𑁍ࠬ  ⊹ ${prefix}nagahari
+│𓂅 𑁍ࠬ  ⊹ ${prefix}arahrezeki
+│𓂅 𑁍ࠬ  ⊹ ${prefix}peruntungan
+│𓂅 𑁍ࠬ  ⊹ ${prefix}weton
+│𓂅 𑁍ࠬ  ⊹ ${prefix}karakter
+│𓂅 𑁍ࠬ  ⊹ ${prefix}keberuntungan
+│𓂅 𑁍ࠬ  ⊹ ${prefix}memancing
+│𓂅 𑁍ࠬ  ⊹ ${prefix}masasubur
+│𓂅 𑁍ࠬ  ⊹ ${prefix}zodiak
 │
 └───────⭓`
-let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '⬅️Back' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 }]
+let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '𝐊𝐞𝐦𝐛𝐚𝐥𝐢' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '𝐋𝐢𝐬𝐭 𝐌𝐞𝐧𝐮' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '𝐃𝐨𝐧𝐚𝐬𝐢' }, type: 1 }]
             await naze.sendButtonText(m.chat, buttons, pimbon, nyoutube, m, {quoted: fkontak})
             }
             break
             case 'mconvert': {
 cnvert = `┌──⭓ *Convert Menu*
 │
-│⭔ ${prefix}attp
-│⭔ ${prefix}ttp
-│⭔ ${prefix}toimage
-│⭔ ${prefix}removebg
-│⭔ ${prefix}sticker
-│⭔ ${prefix}emojimix
-│⭔ ${prefix}emojimix2
-│⭔ ${prefix}tovideo
-│⭔ ${prefix}togif
-│⭔ ${prefix}tourl
-│⭔ ${prefix}tovn
-│⭔ ${prefix}tomp3
-│⭔ ${prefix}toaudio
-│⭔ ${prefix}ebinary
-│⭔ ${prefix}dbinary
-│⭔ ${prefix}styletext
-│⭔ ${prefix}smeme
+│𓂅 𑁍ࠬ  ⊹ ${prefix}attp
+│𓂅 𑁍ࠬ  ⊹ ${prefix}ttp
+│𓂅 𑁍ࠬ  ⊹ ${prefix}toimage
+│𓂅 𑁍ࠬ  ⊹ ${prefix}removebg
+│𓂅 𑁍ࠬ  ⊹ ${prefix}sticker
+│𓂅 𑁍ࠬ  ⊹ ${prefix}emojimix
+│𓂅 𑁍ࠬ  ⊹ ${prefix}emojimix2
+│𓂅 𑁍ࠬ  ⊹ ${prefix}tovideo
+│𓂅 𑁍ࠬ  ⊹ ${prefix}togif
+│𓂅 𑁍ࠬ  ⊹ ${prefix}tourl
+│𓂅 𑁍ࠬ  ⊹ ${prefix}tovn
+│𓂅 𑁍ࠬ  ⊹ ${prefix}tomp3
+│𓂅 𑁍ࠬ  ⊹ ${prefix}toaudio
+│𓂅 𑁍ࠬ  ⊹ ${prefix}ebinary
+│𓂅 𑁍ࠬ  ⊹ ${prefix}dbinary
+│𓂅 𑁍ࠬ  ⊹ ${prefix}styletext
+│𓂅 𑁍ࠬ  ⊹ ${prefix}smeme
 │
 └───────⭓`
-let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '⬅️Back' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 }]
+let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '𝐊𝐞𝐦𝐛𝐚𝐥𝐢' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '𝐋𝐢𝐬𝐭 𝐌𝐞𝐧𝐮' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '𝐃𝐨𝐧𝐚𝐬𝐢' }, type: 1 }]
             await naze.sendButtonText(m.chat, buttons, cnvert, nyoutube, m, {quoted: fkontak})
             }
             break
             case 'mmain': {
 min = `┌──⭓ *Main Menu*
 │
-│⭔ ${prefix}ping
-│⭔ ${prefix}owner
-│⭔ ${prefix}report
-│⭔ ${prefix}menu / ${prefix}help / ${prefix}?
-│⭔ ${prefix}delete
-│⭔ ${prefix}infochat
-│⭔ ${prefix}quoted
-│⭔ ${prefix}listpc
-│⭔ ${prefix}listgc
-│⭔ ${prefix}listonline
-│⭔ ${prefix}speedtest
-│⭔ ${prefix}menfes
-│⭔ ${prefix}tinyurl
-│⭔ ${prefix}isgd
-│⭔ ${prefix}vurl
-│⭔ ${prefix}clp
+│𓂅 𑁍ࠬ  ⊹ ${prefix}ping
+│𓂅 𑁍ࠬ  ⊹ ${prefix}owner
+│𓂅 𑁍ࠬ  ⊹ ${prefix}report
+│𓂅 𑁍ࠬ  ⊹ ${prefix}menu / ${prefix}help / ${prefix}?
+│𓂅 𑁍ࠬ  ⊹ ${prefix}delete
+│𓂅 𑁍ࠬ  ⊹ ${prefix}infochat
+│𓂅 𑁍ࠬ  ⊹ ${prefix}quoted
+│𓂅 𑁍ࠬ  ⊹ ${prefix}listpc
+│𓂅 𑁍ࠬ  ⊹ ${prefix}listgc
+│𓂅 𑁍ࠬ  ⊹ ${prefix}listonline
+│𓂅 𑁍ࠬ  ⊹ ${prefix}speedtest
+│𓂅 𑁍ࠬ  ⊹ ${prefix}menfes
+│𓂅 𑁍ࠬ  ⊹ ${prefix}tinyurl
+│𓂅 𑁍ࠬ  ⊹ ${prefix}isgd
+│𓂅 𑁍ࠬ  ⊹ ${prefix}vurl
+│𓂅 𑁍ࠬ  ⊹ ${prefix}clp
 │
 └───────⭓`
-let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '⬅️Back' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 }]
+let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '𝐊𝐞𝐦𝐛𝐚𝐥𝐢' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '𝐋𝐢𝐬𝐭 𝐌𝐞𝐧𝐮' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '𝐃𝐨𝐧𝐚𝐬𝐢' }, type: 1 }]
             await naze.sendButtonText(m.chat, buttons, min, nyoutube, m, {quoted: fkontak})
             }
             break
             case 'mdatabase': {
 dtbase = `┌──⭓ *Database Menu*
 │
-│⭔ ${prefix}setcmd
-│⭔ ${prefix}listcmd
-│⭔ ${prefix}delcmd
-│⭔ ${prefix}lockcmd
-│⭔ ${prefix}addmsg
-│⭔ ${prefix}listmsg
-│⭔ ${prefix}getmsg
-│⭔ ${prefix}delmsg
+│𓂅 𑁍ࠬ  ⊹ ${prefix}setcmd
+│𓂅 𑁍ࠬ  ⊹ ${prefix}listcmd
+│𓂅 𑁍ࠬ  ⊹ ${prefix}delcmd
+│𓂅 𑁍ࠬ  ⊹ ${prefix}lockcmd
+│𓂅 𑁍ࠬ  ⊹ ${prefix}addmsg
+│𓂅 𑁍ࠬ  ⊹ ${prefix}listmsg
+│𓂅 𑁍ࠬ  ⊹ ${prefix}getmsg
+│𓂅 𑁍ࠬ  ⊹ ${prefix}delmsg
 │
 └───────⭓`
-let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '⬅️Back' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 }]
+let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '𝐊𝐞𝐦𝐛𝐚𝐥𝐢' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '𝐋𝐢𝐬𝐭 𝐌𝐞𝐧𝐮' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '𝐃𝐨𝐧𝐚𝐬𝐢' }, type: 1 }]
             await naze.sendButtonText(m.chat, buttons, dtbase, nyoutube, m, {quoted: fkontak})
             }
             break
             case 'manonymous': {
 aonymous = `┌──⭓ *Anonymous Menu*
 │
-│⭔ ${prefix}anonymous
-│⭔ ${prefix}start
-│⭔ ${prefix}next
-│⭔ ${prefix}keluar
+│𓂅 𑁍ࠬ  ⊹ ${prefix}anonymous
+│𓂅 𑁍ࠬ  ⊹ ${prefix}start
+│𓂅 𑁍ࠬ  ⊹ ${prefix}next
+│𓂅 𑁍ࠬ  ⊹ ${prefix}keluar
 │
 └───────⭓`
-let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '⬅️Back' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 }]
+let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '𝐊𝐞𝐦𝐛𝐚𝐥𝐢' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '𝐋𝐢𝐬𝐭 𝐌𝐞𝐧𝐮' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '𝐃𝐨𝐧𝐚𝐬𝐢' }, type: 1 }]
             await naze.sendButtonText(m.chat, buttons, aonymous, nyoutube, m, {quoted: fkontak})
             }
             break
             case 'mislamic': {
 islmic = `┌──⭓ *Islamic Menu*
 │
-│⭔ ${prefix}iqra
-│⭔ ${prefix}hadist
-│⭔ ${prefix}alquran
-│⭔ ${prefix}juzamma
-│⭔ ${prefix}tafsirsurah
+│𓂅 𑁍ࠬ  ⊹ ${prefix}iqra
+│𓂅 𑁍ࠬ  ⊹ ${prefix}hadist
+│𓂅 𑁍ࠬ  ⊹ ${prefix}alquran
+│𓂅 𑁍ࠬ  ⊹ ${prefix}juzamma
+│𓂅 𑁍ࠬ  ⊹ ${prefix}tafsirsurah
 │
 └───────⭓`
-let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '⬅️Back' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 }]
+let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '𝐊𝐞𝐦𝐛𝐚𝐥𝐢' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '𝐋𝐢𝐬𝐭 𝐌𝐞𝐧𝐮' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '𝐃𝐨𝐧𝐚𝐬𝐢' }, type: 1 }]
             await naze.sendButtonText(m.chat, buttons, islmic, nyoutube, m, {quoted: fkontak})
             }
             break
 case 'mvoice': {
 vice = `┌──⭓ *Voice Changer*
 │
-│⭔ ${prefix}bass
-│⭔ ${prefix}blown
-│⭔ ${prefix}deep
-│⭔ ${prefix}earrape
-│⭔ ${prefix}fast
-│⭔ ${prefix}fat
-│⭔ ${prefix}nightcore
-│⭔ ${prefix}reverse
-│⭔ ${prefix}robot
-│⭔ ${prefix}slow
-│⭔ ${prefix}tupai
+│𓂅 𑁍ࠬ  ⊹ ${prefix}bass
+│𓂅 𑁍ࠬ  ⊹ ${prefix}blown
+│𓂅 𑁍ࠬ  ⊹ ${prefix}deep
+│𓂅 𑁍ࠬ  ⊹ ${prefix}earrape
+│𓂅 𑁍ࠬ  ⊹ ${prefix}fast
+│𓂅 𑁍ࠬ  ⊹ ${prefix}fat
+│𓂅 𑁍ࠬ  ⊹ ${prefix}nightcore
+│𓂅 𑁍ࠬ  ⊹ ${prefix}reverse
+│𓂅 𑁍ࠬ  ⊹ ${prefix}robot
+│𓂅 𑁍ࠬ  ⊹ ${prefix}slow
+│𓂅 𑁍ࠬ  ⊹ ${prefix}tupai
 │
 └───────⭓`
-let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '⬅️Back' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 }]
+let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '𝐊𝐞𝐦𝐛𝐚𝐥𝐢' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '𝐋𝐢𝐬𝐭 𝐌𝐞𝐧𝐮' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '𝐃𝐨𝐧𝐚𝐬𝐢' }, type: 1 }]
             await naze.sendButtonText(m.chat, buttons, vice, nyoutube, m, {quoted: fkontak})
             }
             break
             case 'mowner': {
 oner = `┌──⭓ *Owner Menu*
 │
-│⭔ ${prefix}react [emoji]
-│⭔ ${prefix}chat [option]
-│⭔ ${prefix}join [link]
-│⭔ ${prefix}leave
-│⭔ ${prefix}block @user
-│⭔ ${prefix}unblock @user
-│⭔ ${prefix}bcgroup [text]
-│⭔ ${prefix}bcall [text]
-│⭔ ${prefix}setppbot [image]
-│⭔ ${prefix}setexif
-│⭔ ${prefix}setmenu [option]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}react [emoji]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}chat [option]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}join [link]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}leave
+│𓂅 𑁍ࠬ  ⊹ ${prefix}block @user
+│𓂅 𑁍ࠬ  ⊹ ${prefix}unblock @user
+│𓂅 𑁍ࠬ  ⊹ ${prefix}bcgroup [text]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}bcall [text]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}setppbot [image]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}setexif
+│𓂅 𑁍ࠬ  ⊹ ${prefix}setmenu [option]
 │
 └───────⭓`
-let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '⬅️Back' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 }]
+let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '𝐊𝐞𝐦𝐛𝐚𝐥𝐢' }, type: 1 },{ buttonId: 'allmenu', buttonText: { displayText: '𝐋𝐢𝐬𝐭 𝐌𝐞𝐧𝐮' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '𝐃𝐨𝐧𝐚𝐬𝐢' }, type: 1 }]
             await naze.sendButtonText(m.chat, buttons, oner, nyoutube, m, {quoted: fkontak})
             }
             break
@@ -3368,309 +3368,309 @@ let buttons = [{ buttonId: 'simplemenu', buttonText: { displayText: '⬅️Back'
                 anu = `*${ucapanWaktu}*\n*kak @${me.split('@')[0]}*\n*Powered*  : @${ini_mark.split('@')[0]}\n*Creator* : @${ownernya.split('@')[0]}
 ┌──⭓ *Group Menu*
 │
-│⭔ ${prefix}linkgroup
-│⭔ ${prefix}ephemeral [option]
-│⭔ ${prefix}setppgc [image]
-│⭔ ${prefix}setname [text]
-│⭔ ${prefix}setdesc [text]
-│⭔ ${prefix}group [option]
-│⭔ ${prefix}editinfo [option]
-│⭔ ${prefix}add @user
-│⭔ ${prefix}kick @user
-│⭔ ${prefix}hidetag [text]
-│⭔ ${prefix}tagall [text]
-│⭔ ${prefix}antilink [on/off]
-│⭔ ${prefix}mute [on/off]
-│⭔ ${prefix}promote @user
-│⭔ ${prefix}demote @user
-│⭔ ${prefix}vote [text]
-│⭔ ${prefix}devote
-│⭔ ${prefix}upvote
-│⭔ ${prefix}cekvote
-│⭔ ${prefix}hapusvote
+│𓂅 𑁍ࠬ  ⊹ ${prefix}linkgroup
+│𓂅 𑁍ࠬ  ⊹ ${prefix}ephemeral [option]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}setppgc [image]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}setname [text]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}setdesc [text]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}group [option]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}editinfo [option]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}add @user
+│𓂅 𑁍ࠬ  ⊹ ${prefix}kick @user
+│𓂅 𑁍ࠬ  ⊹ ${prefix}hidetag [text]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}tagall [text]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}antilink [on/off]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}mute [on/off]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}promote @user
+│𓂅 𑁍ࠬ  ⊹ ${prefix}demote @user
+│𓂅 𑁍ࠬ  ⊹ ${prefix}vote [text]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}devote
+│𓂅 𑁍ࠬ  ⊹ ${prefix}upvote
+│𓂅 𑁍ࠬ  ⊹ ${prefix}cekvote
+│𓂅 𑁍ࠬ  ⊹ ${prefix}hapusvote
 │
 └───────⭓
 ┌──⭓ *Webzone Menu*
 │
-│⭔ ${prefix}playstore
-│⭔ ${prefix}gsmarena
-│⭔ ${prefix}jadwalbioskop
-│⭔ ${prefix}nowplayingbioskop
-│⭔ ${prefix}aminio
-│⭔ ${prefix}wattpad
-│⭔ ${prefix}webtoons
-│⭔ ${prefix}drakor
+│𓂅 𑁍ࠬ  ⊹ ${prefix}playstore
+│𓂅 𑁍ࠬ  ⊹ ${prefix}gsmarena
+│𓂅 𑁍ࠬ  ⊹ ${prefix}jadwalbioskop
+│𓂅 𑁍ࠬ  ⊹ ${prefix}nowplayingbioskop
+│𓂅 𑁍ࠬ  ⊹ ${prefix}aminio
+│𓂅 𑁍ࠬ  ⊹ ${prefix}wattpad
+│𓂅 𑁍ࠬ  ⊹ ${prefix}webtoons
+│𓂅 𑁍ࠬ  ⊹ ${prefix}drakor
 │
 └───────⭓
 ┌──⭓ *Downloader Menu*
 │
-│⭔ ${prefix}tiktoknowm [url]
-│⭔ ${prefix}tiktokwm [url]
-│⭔ ${prefix}tiktokmp3 [url]
-│⭔ ${prefix}instagram [url]
-│⭔ ${prefix}twitter [url]
-│⭔ ${prefix}twittermp3 [url]
-│⭔ ${prefix}facebook [url]
-│⭔ ${prefix}pinterestdl [url]
-│⭔ ${prefix}ytmp3 [url]
-│⭔ ${prefix}ytmp4 [url]
-│⭔ ${prefix}getmusic [query]
-│⭔ ${prefix}getvideo [query]
-│⭔ ${prefix}umma [url]
-│⭔ ${prefix}joox [query]
-│⭔ ${prefix}soundcloud [url]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}tiktoknowm [url]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}tiktokwm [url]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}tiktokmp3 [url]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}instagram [url]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}twitter [url]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}twittermp3 [url]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}facebook [url]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}pinterestdl [url]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}ytmp3 [url]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}ytmp4 [url]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}getmusic [query]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}getvideo [query]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}umma [url]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}joox [query]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}soundcloud [url]
 │
 └───────⭓
 ┌──⭓ *Search Menu*
 │
-│⭔ ${prefix}play [query]
-│⭔ ${prefix}yts [query]
-│⭔ ${prefix}google [query]
-│⭔ ${prefix}gimage [query]
-│⭔ ${prefix}pinterest [query]
-│⭔ ${prefix}wallpaper [query]
-│⭔ ${prefix}wikimedia [query]
-│⭔ ${prefix}ytsearch [query]
-│⭔ ${prefix}ringtone [query]
-│⭔ ${prefix}stalk [option] [query]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}play [query]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}yts [query]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}google [query]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}gimage [query]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}pinterest [query]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}wallpaper [query]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}wikimedia [query]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}ytsearch [query]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}ringtone [query]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}stalk [option] [query]
 │
 └───────⭓
 ┌──⭓ *Random Menu*
 │
-│⭔ ${prefix}gbtku
-│⭔ ${prefix}coffe
-│⭔ ${prefix}quotesanime
-│⭔ ${prefix}motivasi
-│⭔ ${prefix}dilanquote
-│⭔ ${prefix}bucinquote
-│⭔ ${prefix}katasenja
-│⭔ ${prefix}puisi
-│⭔ ${prefix}couple
-│⭔ ${prefix}anime
-│⭔ ${prefix}waifu
+│𓂅 𑁍ࠬ  ⊹ ${prefix}gbtku
+│𓂅 𑁍ࠬ  ⊹ ${prefix}coffe
+│𓂅 𑁍ࠬ  ⊹ ${prefix}quotesanime
+│𓂅 𑁍ࠬ  ⊹ ${prefix}motivasi
+│𓂅 𑁍ࠬ  ⊹ ${prefix}dilanquote
+│𓂅 𑁍ࠬ  ⊹ ${prefix}bucinquote
+│𓂅 𑁍ࠬ  ⊹ ${prefix}katasenja
+│𓂅 𑁍ࠬ  ⊹ ${prefix}puisi
+│𓂅 𑁍ࠬ  ⊹ ${prefix}couple
+│𓂅 𑁍ࠬ  ⊹ ${prefix}anime
+│𓂅 𑁍ࠬ  ⊹ ${prefix}waifu
 │
 └───────⭓
 ┌──⭓ *Text Pro Menu*
 │
-│⭔ ${prefix}3dchristmas
-│⭔ ${prefix}3ddeepsea
-│⭔ ${prefix}americanflag
-│⭔ ${prefix}3dscifi
-│⭔ ${prefix}3drainbow
-│⭔ ${prefix}3dwaterpipe
-│⭔ ${prefix}halloweenskeleton
-│⭔ ${prefix}sketch
-│⭔ ${prefix}bluecircuit
-│⭔ ${prefix}space
-│⭔ ${prefix}metallic
-│⭔ ${prefix}fiction
-│⭔ ${prefix}greenhorror
-│⭔ ${prefix}transformer
-│⭔ ${prefix}berry
-│⭔ ${prefix}thunder
-│⭔ ${prefix}magma
-│⭔ ${prefix}3dcrackedstone
-│⭔ ${prefix}3dneonlight
-│⭔ ${prefix}impressiveglitch
-│⭔ ${prefix}naturalleaves
-│⭔ ${prefix}fireworksparkle
-│⭔ ${prefix}matrix
-│⭔ ${prefix}dropwater
-│⭔ ${prefix}harrypotter
-│⭔ ${prefix}foggywindow
-│⭔ ${prefix}neondevils
-│⭔ ${prefix}christmasholiday
-│⭔ ${prefix}3dgradient
-│⭔ ${prefix}blackpink
-│⭔ ${prefix}gluetext
+│𓂅 𑁍ࠬ  ⊹ ${prefix}3dchristmas
+│𓂅 𑁍ࠬ  ⊹ ${prefix}3ddeepsea
+│𓂅 𑁍ࠬ  ⊹ ${prefix}americanflag
+│𓂅 𑁍ࠬ  ⊹ ${prefix}3dscifi
+│𓂅 𑁍ࠬ  ⊹ ${prefix}3drainbow
+│𓂅 𑁍ࠬ  ⊹ ${prefix}3dwaterpipe
+│𓂅 𑁍ࠬ  ⊹ ${prefix}halloweenskeleton
+│𓂅 𑁍ࠬ  ⊹ ${prefix}sketch
+│𓂅 𑁍ࠬ  ⊹ ${prefix}bluecircuit
+│𓂅 𑁍ࠬ  ⊹ ${prefix}space
+│𓂅 𑁍ࠬ  ⊹ ${prefix}metallic
+│𓂅 𑁍ࠬ  ⊹ ${prefix}fiction
+│𓂅 𑁍ࠬ  ⊹ ${prefix}greenhorror
+│𓂅 𑁍ࠬ  ⊹ ${prefix}transformer
+│𓂅 𑁍ࠬ  ⊹ ${prefix}berry
+│𓂅 𑁍ࠬ  ⊹ ${prefix}thunder
+│𓂅 𑁍ࠬ  ⊹ ${prefix}magma
+│𓂅 𑁍ࠬ  ⊹ ${prefix}3dcrackedstone
+│𓂅 𑁍ࠬ  ⊹ ${prefix}3dneonlight
+│𓂅 𑁍ࠬ  ⊹ ${prefix}impressiveglitch
+│𓂅 𑁍ࠬ  ⊹ ${prefix}naturalleaves
+│𓂅 𑁍ࠬ  ⊹ ${prefix}fireworksparkle
+│𓂅 𑁍ࠬ  ⊹ ${prefix}matrix
+│𓂅 𑁍ࠬ  ⊹ ${prefix}dropwater
+│𓂅 𑁍ࠬ  ⊹ ${prefix}harrypotter
+│𓂅 𑁍ࠬ  ⊹ ${prefix}foggywindow
+│𓂅 𑁍ࠬ  ⊹ ${prefix}neondevils
+│𓂅 𑁍ࠬ  ⊹ ${prefix}christmasholiday
+│𓂅 𑁍ࠬ  ⊹ ${prefix}3dgradient
+│𓂅 𑁍ࠬ  ⊹ ${prefix}blackpink
+│𓂅 𑁍ࠬ  ⊹ ${prefix}gluetext
 │
 └───────⭓
 ┌──⭓ *Photo Oxy Menu*
 │
-│⭔ ${prefix}shadow
-│⭔ ${prefix}romantic
-│⭔ ${prefix}smoke
-│⭔ ${prefix}burnpapper
-│⭔ ${prefix}naruto
-│⭔ ${prefix}lovemsg
-│⭔ ${prefix}grassmsg
-│⭔ ${prefix}lovetext
-│⭔ ${prefix}coffecup
-│⭔ ${prefix}butterfly
-│⭔ ${prefix}harrypotter
-│⭔ ${prefix}retrolol
+│𓂅 𑁍ࠬ  ⊹ ${prefix}shadow
+│𓂅 𑁍ࠬ  ⊹ ${prefix}romantic
+│𓂅 𑁍ࠬ  ⊹ ${prefix}smoke
+│𓂅 𑁍ࠬ  ⊹ ${prefix}burnpapper
+│𓂅 𑁍ࠬ  ⊹ ${prefix}naruto
+│𓂅 𑁍ࠬ  ⊹ ${prefix}lovemsg
+│𓂅 𑁍ࠬ  ⊹ ${prefix}grassmsg
+│𓂅 𑁍ࠬ  ⊹ ${prefix}lovetext
+│𓂅 𑁍ࠬ  ⊹ ${prefix}coffecup
+│𓂅 𑁍ࠬ  ⊹ ${prefix}butterfly
+│𓂅 𑁍ࠬ  ⊹ ${prefix}harrypotter
+│𓂅 𑁍ࠬ  ⊹ ${prefix}retrolol
 │
 └───────⭓
 ┌──⭓ *Ephoto Menu*
 │
-│⭔ ${prefix}ffcover
-│⭔ ${prefix}crossfire
-│⭔ ${prefix}galaxy
-│⭔ ${prefix}glass
-│⭔ ${prefix}neon
-│⭔ ${prefix}beach
-│⭔ ${prefix}blackpink
-│⭔ ${prefix}igcertificate
-│⭔ ${prefix}ytcertificate
+│𓂅 𑁍ࠬ  ⊹ ${prefix}ffcover
+│𓂅 𑁍ࠬ  ⊹ ${prefix}crossfire
+│𓂅 𑁍ࠬ  ⊹ ${prefix}galaxy
+│𓂅 𑁍ࠬ  ⊹ ${prefix}glass
+│𓂅 𑁍ࠬ  ⊹ ${prefix}neon
+│𓂅 𑁍ࠬ  ⊹ ${prefix}beach
+│𓂅 𑁍ࠬ  ⊹ ${prefix}blackpink
+│𓂅 𑁍ࠬ  ⊹ ${prefix}igcertificate
+│𓂅 𑁍ࠬ  ⊹ ${prefix}ytcertificate
 │
 └───────⭓
 ┌──⭓ *Fun Menu*
 │
-│⭔ ${prefix}simih
-│⭔ ${prefix}halah
-│⭔ ${prefix}hilih
-│⭔ ${prefix}huluh
-│⭔ ${prefix}heleh
-│⭔ ${prefix}holoh
-│⭔ ${prefix}jadian
-│⭔ ${prefix}jodohku
-│⭔ ${prefix}apakah
-│⭔ ${prefix}bisakah
-│⭔ ${prefix}kapan
-│⭔ ${prefix}slot
-│⭔ ${prefix}delttt
-│⭔ ${prefix}tictactoe
-│⭔ ${prefix}family100
-│⭔ ${prefix}tebak [option]
-│⭔ ${prefix}math [mode]
-│⭔ ${prefix}suitpvp [@tag]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}simih
+│𓂅 𑁍ࠬ  ⊹ ${prefix}halah
+│𓂅 𑁍ࠬ  ⊹ ${prefix}hilih
+│𓂅 𑁍ࠬ  ⊹ ${prefix}huluh
+│𓂅 𑁍ࠬ  ⊹ ${prefix}heleh
+│𓂅 𑁍ࠬ  ⊹ ${prefix}holoh
+│𓂅 𑁍ࠬ  ⊹ ${prefix}jadian
+│𓂅 𑁍ࠬ  ⊹ ${prefix}jodohku
+│𓂅 𑁍ࠬ  ⊹ ${prefix}apakah
+│𓂅 𑁍ࠬ  ⊹ ${prefix}bisakah
+│𓂅 𑁍ࠬ  ⊹ ${prefix}kapan
+│𓂅 𑁍ࠬ  ⊹ ${prefix}slot
+│𓂅 𑁍ࠬ  ⊹ ${prefix}delttt
+│𓂅 𑁍ࠬ  ⊹ ${prefix}tictactoe
+│𓂅 𑁍ࠬ  ⊹ ${prefix}family100
+│𓂅 𑁍ࠬ  ⊹ ${prefix}tebak [option]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}math [mode]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}suitpvp [@tag]
 │
 └───────⭓
 ┌──⭓ *Primbon Menu*
 │
-│⭔ ${prefix}nomorhoki
-│⭔ ${prefix}artimimpi
-│⭔ ${prefix}artinama
-│⭔ ${prefix}ramaljodoh
-│⭔ ${prefix}ramaljodohbali
-│⭔ ${prefix}suamiistri
-│⭔ ${prefix}ramalcinta
-│⭔ ${prefix}cocoknama
-│⭔ ${prefix}pasangan
-│⭔ ${prefix}jadiannikah
-│⭔ ${prefix}sifatusaha
-│⭔ ${prefix}rezeki
-│⭔ ${prefix}pekerjaan
-│⭔ ${prefix}nasib
-│⭔ ${prefix}penyakit
-│⭔ ${prefix}tarot
-│⭔ ${prefix}fengshui
-│⭔ ${prefix}haribaik
-│⭔ ${prefix}harisangar
-│⭔ ${prefix}harisial
-│⭔ ${prefix}nagahari
-│⭔ ${prefix}arahrezeki
-│⭔ ${prefix}peruntungan
-│⭔ ${prefix}weton
-│⭔ ${prefix}karakter
-│⭔ ${prefix}keberuntungan
-│⭔ ${prefix}memancing
-│⭔ ${prefix}masasubur
-│⭔ ${prefix}zodiak
+│𓂅 𑁍ࠬ  ⊹ ${prefix}nomorhoki
+│𓂅 𑁍ࠬ  ⊹ ${prefix}artimimpi
+│𓂅 𑁍ࠬ  ⊹ ${prefix}artinama
+│𓂅 𑁍ࠬ  ⊹ ${prefix}ramaljodoh
+│𓂅 𑁍ࠬ  ⊹ ${prefix}ramaljodohbali
+│𓂅 𑁍ࠬ  ⊹ ${prefix}suamiistri
+│𓂅 𑁍ࠬ  ⊹ ${prefix}ramalcinta
+│𓂅 𑁍ࠬ  ⊹ ${prefix}cocoknama
+│𓂅 𑁍ࠬ  ⊹ ${prefix}pasangan
+│𓂅 𑁍ࠬ  ⊹ ${prefix}jadiannikah
+│𓂅 𑁍ࠬ  ⊹ ${prefix}sifatusaha
+│𓂅 𑁍ࠬ  ⊹ ${prefix}rezeki
+│𓂅 𑁍ࠬ  ⊹ ${prefix}pekerjaan
+│𓂅 𑁍ࠬ  ⊹ ${prefix}nasib
+│𓂅 𑁍ࠬ  ⊹ ${prefix}penyakit
+│𓂅 𑁍ࠬ  ⊹ ${prefix}tarot
+│𓂅 𑁍ࠬ  ⊹ ${prefix}fengshui
+│𓂅 𑁍ࠬ  ⊹ ${prefix}haribaik
+│𓂅 𑁍ࠬ  ⊹ ${prefix}harisangar
+│𓂅 𑁍ࠬ  ⊹ ${prefix}harisial
+│𓂅 𑁍ࠬ  ⊹ ${prefix}nagahari
+│𓂅 𑁍ࠬ  ⊹ ${prefix}arahrezeki
+│𓂅 𑁍ࠬ  ⊹ ${prefix}peruntungan
+│𓂅 𑁍ࠬ  ⊹ ${prefix}weton
+│𓂅 𑁍ࠬ  ⊹ ${prefix}karakter
+│𓂅 𑁍ࠬ  ⊹ ${prefix}keberuntungan
+│𓂅 𑁍ࠬ  ⊹ ${prefix}memancing
+│𓂅 𑁍ࠬ  ⊹ ${prefix}masasubur
+│𓂅 𑁍ࠬ  ⊹ ${prefix}zodiak
 │
 └───────⭓
 ┌──⭓ *Convert Menu*
 │
-│⭔ ${prefix}attp
-│⭔ ${prefix}ttp
-│⭔ ${prefix}toimage
-│⭔ ${prefix}removebg
-│⭔ ${prefix}sticker
-│⭔ ${prefix}emojimix
-│⭔ ${prefix}emojimix2
-│⭔ ${prefix}tovideo
-│⭔ ${prefix}togif
-│⭔ ${prefix}tourl
-│⭔ ${prefix}tovn
-│⭔ ${prefix}tomp3
-│⭔ ${prefix}toaudio
-│⭔ ${prefix}ebinary
-│⭔ ${prefix}dbinary
-│⭔ ${prefix}styletext
-│⭔ ${prefix}smeme
+│𓂅 𑁍ࠬ  ⊹ ${prefix}attp
+│𓂅 𑁍ࠬ  ⊹ ${prefix}ttp
+│𓂅 𑁍ࠬ  ⊹ ${prefix}toimage
+│𓂅 𑁍ࠬ  ⊹ ${prefix}removebg
+│𓂅 𑁍ࠬ  ⊹ ${prefix}sticker
+│𓂅 𑁍ࠬ  ⊹ ${prefix}emojimix
+│𓂅 𑁍ࠬ  ⊹ ${prefix}emojimix2
+│𓂅 𑁍ࠬ  ⊹ ${prefix}tovideo
+│𓂅 𑁍ࠬ  ⊹ ${prefix}togif
+│𓂅 𑁍ࠬ  ⊹ ${prefix}tourl
+│𓂅 𑁍ࠬ  ⊹ ${prefix}tovn
+│𓂅 𑁍ࠬ  ⊹ ${prefix}tomp3
+│𓂅 𑁍ࠬ  ⊹ ${prefix}toaudio
+│𓂅 𑁍ࠬ  ⊹ ${prefix}ebinary
+│𓂅 𑁍ࠬ  ⊹ ${prefix}dbinary
+│𓂅 𑁍ࠬ  ⊹ ${prefix}styletext
+│𓂅 𑁍ࠬ  ⊹ ${prefix}smeme
 │
 └───────⭓
 ┌──⭓ *Main Menu*
 │
-│⭔ ${prefix}ping
-│⭔ ${prefix}owner
-│⭔ ${prefix}report
-│⭔ ${prefix}menu / ${prefix}help / ${prefix}?
-│⭔ ${prefix}delete
-│⭔ ${prefix}infochat
-│⭔ ${prefix}quoted
-│⭔ ${prefix}listpc
-│⭔ ${prefix}listgc
-│⭔ ${prefix}listonline
-│⭔ ${prefix}speedtest
-│⭔ ${prefix}menfes
-│⭔ ${prefix}tinyurl
-│⭔ ${prefix}isgd
-│⭔ ${prefix}vurl
-│⭔ ${prefix}clp
+│𓂅 𑁍ࠬ  ⊹ ${prefix}ping
+│𓂅 𑁍ࠬ  ⊹ ${prefix}owner
+│𓂅 𑁍ࠬ  ⊹ ${prefix}report
+│𓂅 𑁍ࠬ  ⊹ ${prefix}menu / ${prefix}help / ${prefix}?
+│𓂅 𑁍ࠬ  ⊹ ${prefix}delete
+│𓂅 𑁍ࠬ  ⊹ ${prefix}infochat
+│𓂅 𑁍ࠬ  ⊹ ${prefix}quoted
+│𓂅 𑁍ࠬ  ⊹ ${prefix}listpc
+│𓂅 𑁍ࠬ  ⊹ ${prefix}listgc
+│𓂅 𑁍ࠬ  ⊹ ${prefix}listonline
+│𓂅 𑁍ࠬ  ⊹ ${prefix}speedtest
+│𓂅 𑁍ࠬ  ⊹ ${prefix}menfes
+│𓂅 𑁍ࠬ  ⊹ ${prefix}tinyurl
+│𓂅 𑁍ࠬ  ⊹ ${prefix}isgd
+│𓂅 𑁍ࠬ  ⊹ ${prefix}vurl
+│𓂅 𑁍ࠬ  ⊹ ${prefix}clp
 │
 └───────⭓
 ┌──⭓ *Database Menu*
 │
-│⭔ ${prefix}setcmd
-│⭔ ${prefix}listcmd
-│⭔ ${prefix}delcmd
-│⭔ ${prefix}lockcmd
-│⭔ ${prefix}addmsg
-│⭔ ${prefix}listmsg
-│⭔ ${prefix}getmsg
-│⭔ ${prefix}delmsg
+│𓂅 𑁍ࠬ  ⊹ ${prefix}setcmd
+│𓂅 𑁍ࠬ  ⊹ ${prefix}listcmd
+│𓂅 𑁍ࠬ  ⊹ ${prefix}delcmd
+│𓂅 𑁍ࠬ  ⊹ ${prefix}lockcmd
+│𓂅 𑁍ࠬ  ⊹ ${prefix}addmsg
+│𓂅 𑁍ࠬ  ⊹ ${prefix}listmsg
+│𓂅 𑁍ࠬ  ⊹ ${prefix}getmsg
+│𓂅 𑁍ࠬ  ⊹ ${prefix}delmsg
 │
 └───────⭓
 ┌──⭓ *Anonymous Menu*
 │
-│⭔ ${prefix}anonymous
-│⭔ ${prefix}start
-│⭔ ${prefix}next
-│⭔ ${prefix}keluar
+│𓂅 𑁍ࠬ  ⊹ ${prefix}anonymous
+│𓂅 𑁍ࠬ  ⊹ ${prefix}start
+│𓂅 𑁍ࠬ  ⊹ ${prefix}next
+│𓂅 𑁍ࠬ  ⊹ ${prefix}keluar
 │
 └───────⭓
 ┌──⭓ *Islamic Menu*
 │
-│⭔ ${prefix}iqra
-│⭔ ${prefix}hadist
-│⭔ ${prefix}alquran
-│⭔ ${prefix}juzamma
-│⭔ ${prefix}tafsirsurah
+│𓂅 𑁍ࠬ  ⊹ ${prefix}iqra
+│𓂅 𑁍ࠬ  ⊹ ${prefix}hadist
+│𓂅 𑁍ࠬ  ⊹ ${prefix}alquran
+│𓂅 𑁍ࠬ  ⊹ ${prefix}juzamma
+│𓂅 𑁍ࠬ  ⊹ ${prefix}tafsirsurah
 │
 └───────⭓
 ┌──⭓ *Voice Changer*
 │
-│⭔ ${prefix}bass
-│⭔ ${prefix}blown
-│⭔ ${prefix}deep
-│⭔ ${prefix}earrape
-│⭔ ${prefix}fast
-│⭔ ${prefix}fat
-│⭔ ${prefix}nightcore
-│⭔ ${prefix}reverse
-│⭔ ${prefix}robot
-│⭔ ${prefix}slow
-│⭔ ${prefix}tupai
+│𓂅 𑁍ࠬ  ⊹ ${prefix}bass
+│𓂅 𑁍ࠬ  ⊹ ${prefix}blown
+│𓂅 𑁍ࠬ  ⊹ ${prefix}deep
+│𓂅 𑁍ࠬ  ⊹ ${prefix}earrape
+│𓂅 𑁍ࠬ  ⊹ ${prefix}fast
+│𓂅 𑁍ࠬ  ⊹ ${prefix}fat
+│𓂅 𑁍ࠬ  ⊹ ${prefix}nightcore
+│𓂅 𑁍ࠬ  ⊹ ${prefix}reverse
+│𓂅 𑁍ࠬ  ⊹ ${prefix}robot
+│𓂅 𑁍ࠬ  ⊹ ${prefix}slow
+│𓂅 𑁍ࠬ  ⊹ ${prefix}tupai
 │
 └───────⭓
 ┌──⭓ *Owner Menu*
 │
-│⭔ ${prefix}react [emoji]
-│⭔ ${prefix}chat [option]
-│⭔ ${prefix}join [link]
-│⭔ ${prefix}leave
-│⭔ ${prefix}block @user
-│⭔ ${prefix}unblock @user
-│⭔ ${prefix}bcgroup [text]
-│⭔ ${prefix}bcall [text]
-│⭔ ${prefix}setppbot [image]
-│⭔ ${prefix}setexif
-│⭔ ${prefix}setmenu [option]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}react [emoji]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}chat [option]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}join [link]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}leave
+│𓂅 𑁍ࠬ  ⊹ ${prefix}block @user
+│𓂅 𑁍ࠬ  ⊹ ${prefix}unblock @user
+│𓂅 𑁍ࠬ  ⊹ ${prefix}bcgroup [text]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}bcall [text]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}setppbot [image]
+│𓂅 𑁍ࠬ  ⊹ ${prefix}setexif
+│𓂅 𑁍ࠬ  ⊹ ${prefix}setmenu [option]
 │
 └───────⭓
 _Donasi Ngab_\n_Jangan Ngarep Free Mulu_`
-                let buttons = [{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 },{ buttonId: 'rules', buttonText: { displayText: '❗Rules' }, type: 1 }]
+                let buttons = [{ buttonId: 'donasi', buttonText: { displayText: '𝐃𝐨𝐧𝐚𝐬𝐢' }, type: 1 },{ buttonId: 'rules', buttonText: { displayText: '𝐑𝐮𝐥𝐞𝐬 𝐁𝐨𝐭' }, type: 1 }]
             await naze.sendButtonText(m.chat, buttons, anu, nyoutube, m, {mentions: ments, quoted: fkontak})
             }
             break
